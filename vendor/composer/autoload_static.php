@@ -24,9 +24,14 @@ class ComposerStaticInit6fff64fcc21ce4541ecc03570f7a0d9d
     );
 
     public static $prefixLengthsPsr4 = array (
+        'c' => 
+        array (
+            'cweagans\\Composer\\' => 18,
+        ),
         'T' => 
         array (
             'Typo3Console\\ComposerAutoCommands\\' => 34,
+            'TravisLykes\\HofexpressPackage\\' => 30,
             'TYPO3\\PharStreamWrapper\\' => 24,
             'TYPO3\\ClassAliasLoader\\' => 23,
             'TYPO3\\CMS\\Viewpage\\' => 19,
@@ -36,6 +41,7 @@ class ComposerStaticInit6fff64fcc21ce4541ecc03570f7a0d9d
             'TYPO3\\CMS\\Setup\\' => 16,
             'TYPO3\\CMS\\Seo\\' => 14,
             'TYPO3\\CMS\\Scheduler\\' => 20,
+            'TYPO3\\CMS\\RteCKEditor\\' => 22,
             'TYPO3\\CMS\\Reports\\' => 18,
             'TYPO3\\CMS\\Redirects\\' => 20,
             'TYPO3\\CMS\\Recordlist\\' => 21,
@@ -77,6 +83,7 @@ class ComposerStaticInit6fff64fcc21ce4541ecc03570f7a0d9d
             'Symfony\\Component\\ExpressionLanguage\\' => 37,
             'Symfony\\Component\\Console\\' => 26,
             'Symfony\\Component\\Cache\\' => 24,
+            'ScssPhp\\ScssPhp\\' => 16,
         ),
         'P' => 
         array (
@@ -112,12 +119,24 @@ class ComposerStaticInit6fff64fcc21ce4541ecc03570f7a0d9d
             'Doctrine\\Common\\Annotations\\' => 28,
             'Doctrine\\Common\\' => 16,
         ),
+        'B' => 
+        array (
+            'BK2K\\BootstrapPackage\\' => 22,
+        ),
     );
 
     public static $prefixDirsPsr4 = array (
+        'cweagans\\Composer\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/cweagans/composer-patches/src',
+        ),
         'Typo3Console\\ComposerAutoCommands\\' => 
         array (
             0 => __DIR__ . '/..' . '/typo3-console/composer-auto-commands/src',
+        ),
+        'TravisLykes\\HofexpressPackage\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/public/typo3conf/ext/hofexpress_package/Classes',
         ),
         'TYPO3\\PharStreamWrapper\\' => 
         array (
@@ -154,6 +173,10 @@ class ComposerStaticInit6fff64fcc21ce4541ecc03570f7a0d9d
         'TYPO3\\CMS\\Scheduler\\' => 
         array (
             0 => __DIR__ . '/../..' . '/public/typo3/sysext/scheduler/Classes',
+        ),
+        'TYPO3\\CMS\\RteCKEditor\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/public/typo3/sysext/rte_ckeditor/Classes',
         ),
         'TYPO3\\CMS\\Reports\\' => 
         array (
@@ -307,6 +330,10 @@ class ComposerStaticInit6fff64fcc21ce4541ecc03570f7a0d9d
         array (
             0 => __DIR__ . '/..' . '/symfony/cache',
         ),
+        'ScssPhp\\ScssPhp\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/scssphp/scssphp/src',
+        ),
         'Psr\\Log\\' => 
         array (
             0 => __DIR__ . '/..' . '/psr/log/Psr/Log',
@@ -384,6 +411,10 @@ class ComposerStaticInit6fff64fcc21ce4541ecc03570f7a0d9d
         'Doctrine\\Common\\' => 
         array (
             0 => __DIR__ . '/..' . '/doctrine/event-manager/lib/Doctrine/Common',
+        ),
+        'BK2K\\BootstrapPackage\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/public/typo3conf/ext/bootstrap_package/Classes',
         ),
     );
 
