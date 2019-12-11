@@ -6,7 +6,9 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'cweagans\\Composer\\' => array($vendorDir . '/cweagans/composer-patches/src'),
     'Typo3Console\\ComposerAutoCommands\\' => array($vendorDir . '/typo3-console/composer-auto-commands/src'),
+    'TravisLykes\\HofexpressPackage\\' => array($baseDir . '/public/typo3conf/ext/hofexpress_package/Classes'),
     'TYPO3\\PharStreamWrapper\\' => array($vendorDir . '/typo3/phar-stream-wrapper/src'),
     'TYPO3\\ClassAliasLoader\\' => array($vendorDir . '/typo3/class-alias-loader/src'),
     'TYPO3\\CMS\\Viewpage\\' => array($baseDir . '/public/typo3/sysext/viewpage/Classes'),
@@ -16,6 +18,7 @@ return array(
     'TYPO3\\CMS\\Setup\\' => array($baseDir . '/public/typo3/sysext/setup/Classes'),
     'TYPO3\\CMS\\Seo\\' => array($baseDir . '/public/typo3/sysext/seo/Classes'),
     'TYPO3\\CMS\\Scheduler\\' => array($baseDir . '/public/typo3/sysext/scheduler/Classes'),
+    'TYPO3\\CMS\\RteCKEditor\\' => array($baseDir . '/public/typo3/sysext/rte_ckeditor/Classes'),
     'TYPO3\\CMS\\Reports\\' => array($baseDir . '/public/typo3/sysext/reports/Classes'),
     'TYPO3\\CMS\\Redirects\\' => array($baseDir . '/public/typo3/sysext/redirects/Classes'),
     'TYPO3\\CMS\\Recordlist\\' => array($baseDir . '/public/typo3/sysext/recordlist/Classes'),
@@ -54,6 +57,7 @@ return array(
     'Symfony\\Component\\ExpressionLanguage\\' => array($vendorDir . '/symfony/expression-language'),
     'Symfony\\Component\\Console\\' => array($vendorDir . '/symfony/console'),
     'Symfony\\Component\\Cache\\' => array($vendorDir . '/symfony/cache'),
+    'ScssPhp\\ScssPhp\\' => array($vendorDir . '/scssphp/scssphp/src'),
     'Psr\\Log\\' => array($vendorDir . '/psr/log/Psr/Log'),
     'Psr\\Http\\Server\\' => array($vendorDir . '/psr/http-server-handler/src', $vendorDir . '/psr/http-server-middleware/src'),
     'Psr\\Http\\Message\\' => array($vendorDir . '/psr/http-message/src'),
@@ -73,4 +77,5 @@ return array(
     'Doctrine\\Common\\Cache\\' => array($vendorDir . '/doctrine/cache/lib/Doctrine/Common/Cache'),
     'Doctrine\\Common\\Annotations\\' => array($vendorDir . '/doctrine/annotations/lib/Doctrine/Common/Annotations'),
     'Doctrine\\Common\\' => array($vendorDir . '/doctrine/event-manager/lib/Doctrine/Common'),
+    'BK2K\\BootstrapPackage\\' => array($baseDir . '/public/typo3conf/ext/bootstrap_package/Classes'),
 );
