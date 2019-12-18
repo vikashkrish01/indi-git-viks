@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="EXT:hofexpress/Resources/Private/Language/locallang_csh" date="2019-12-18T13:37:10Z" product-name="hofexpress">
+		<header/>
+		<body>
+			<trans-unit id="order_id.description" resname="order_id.description">
+				<source>orderId</source>
+			</trans-unit>
+			<trans-unit id="quantity.description" resname="quantity.description">
+				<source>quantity</source>
+			</trans-unit>
+			<trans-unit id="tx_hofexpress_order.description" resname="tx_hofexpress_order.description">
+				<source>order</source>
+			</trans-unit>
+			<trans-unit id="food.description" resname="food.description">
+				<source>food</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

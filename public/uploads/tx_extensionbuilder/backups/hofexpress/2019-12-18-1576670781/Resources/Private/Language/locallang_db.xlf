@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="EXT:hofexpress/Resources/Private/Language/locallang_db" date="2019-12-18T11:50:05Z" product-name="hofexpress">
+		<header/>
+		<body>
+			<trans-unit id="tx_hofexpress_domain_model_customer" resname="tx_hofexpress_domain_model_customer">
+				<source>Customer</source>
+			</trans-unit>
+			<trans-unit id="tx_hofexpress_domain_model_customer.user_id" resname="tx_hofexpress_domain_model_customer.user_id">
+				<source>User Id</source>
+			</trans-unit>
+			<trans-unit id="tx_hofexpress_domain_model_customer.name" resname="tx_hofexpress_domain_model_customer.name">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="tx_hofexpress_domain_model_customer.address" resname="tx_hofexpress_domain_model_customer.address">
+				<source>Address</source>
+			</trans-unit>
+			<trans-unit id="tx_hofexpress_domain_model_customer.phone_number" resname="tx_hofexpress_domain_model_customer.phone_number">
+				<source>Phone Number</source>
+			</trans-unit>
+			<trans-unit id="tx_hofexpress_domain_model_customer.email_id" resname="tx_hofexpress_domain_model_customer.email_id">
+				<source>Email Id</source>
+			</trans-unit>
+			<trans-unit id="tx_hofexpress_domain_model_address" resname="tx_hofexpress_domain_model_address">
+				<source>Address</source>
+			</trans-unit>
+			<trans-unit id="tx_hofexpress_domain_model_food" resname="tx_hofexpress_domain_model_food">
+				<source>Food</source>
+			</trans-unit>
+			<trans-unit id="tx_hofexpress_domain_model_food.food_name" resname="tx_hofexpress_domain_model_food.food_name">
+				<source>Food Name</source>
+			</trans-unit>
+			<trans-unit id="tx_hofexpress_domain_model_food.restaurant_id" resname="tx_hofexpress_domain_model_food.restaurant_id">
+				<source>Restaurant Id</source>
+			</trans-unit>
+			<trans-unit id="tx_hofexpress_domain_model_food.price" resname="tx_hofexpress_domain_model_food.price">
+				<source>Price</source>
+			</trans-unit>
+			<trans-unit id="tx_hofexpress_domain_model_food.food_type" resname="tx_hofexpress_domain_model_food.food_type">
+				<source>Food Type</source>
+			</trans-unit>
+			<trans-unit id="tx_hofexpress_domain_model_restaurant" resname="tx_hofexpress_domain_model_restaurant">
+				<source>Restaurant</source>
+			</trans-unit>
+			<trans-unit id="tx_hofexpress_domain_model_restaurant.restaurant_id" resname="tx_hofexpress_domain_model_restaurant.restaurant_id">
+				<source>Restaurant Id</source>
+			</trans-unit>
+			<trans-unit id="tx_hofexpress_domain_model_restaurant.restaurant_name" resname="tx_hofexpress_domain_model_restaurant.restaurant_name">
+				<source>Restaurant Name</source>
+			</trans-unit>
+			<trans-unit id="tx_hofexpress_domain_model_restaurant.description" resname="tx_hofexpress_domain_model_restaurant.description">
+				<source>Description</source>
+			</trans-unit>
+			<trans-unit id="tx_hofexpress_domain_model_restaurant.logo" resname="tx_hofexpress_domain_model_restaurant.logo">
+				<source>Logo</source>
+			</trans-unit>
+			<trans-unit id="tx_hofexpress_domain_model_restaurant.address" resname="tx_hofexpress_domain_model_restaurant.address">
+				<source>Address</source>
+			</trans-unit>
+			<trans-unit id="tx_hofexpress_domain_model_restaurant.restaurant_type" resname="tx_hofexpress_domain_model_restaurant.restaurant_type">
+				<source>Restaurant Type</source>
+			</trans-unit>
+			<trans-unit id="tx_hofexpress_domain_model_order" resname="tx_hofexpress_domain_model_order">
+				<source>Order</source>
+			</trans-unit>
+			<trans-unit id="tx_hofexpress_domain_model_orderitems" resname="tx_hofexpress_domain_model_orderitems">
+				<source>Order Items</source>
+			</trans-unit>
+			<trans-unit id="tx_hofexpress_domain_model_orderitems.order_id" resname="tx_hofexpress_domain_model_orderitems.order_id">
+				<source>Order Id</source>
+			</trans-unit>
+			<trans-unit id="tx_hofexpress_domain_model_orderitems.food_items" resname="tx_hofexpress_domain_model_orderitems.food_items">
+				<source>Food Items</source>
+			</trans-unit>
+			<trans-unit id="tx_hofexpress_domain_model_orderitems.quantity" resname="tx_hofexpress_domain_model_orderitems.quantity">
+				<source>Quantity</source>
+			</trans-unit>
+			<trans-unit id="tx_hofexpress_domain_model_deliverytype" resname="tx_hofexpress_domain_model_deliverytype">
+				<source>Delivery Type</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

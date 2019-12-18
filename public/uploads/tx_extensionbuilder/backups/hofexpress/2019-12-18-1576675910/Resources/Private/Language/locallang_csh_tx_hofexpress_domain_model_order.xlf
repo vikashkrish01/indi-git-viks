@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="EXT:hofexpress/Resources/Private/Language/locallang_csh" date="2019-12-18T13:28:32Z" product-name="hofexpress">
+		<header/>
+		<body>
+			<trans-unit id="user_id.description" resname="user_id.description">
+				<source>userId</source>
+			</trans-unit>
+			<trans-unit id="total_amount.description" resname="total_amount.description">
+				<source>totalAmount</source>
+			</trans-unit>
+			<trans-unit id="status.description" resname="status.description">
+				<source>status</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

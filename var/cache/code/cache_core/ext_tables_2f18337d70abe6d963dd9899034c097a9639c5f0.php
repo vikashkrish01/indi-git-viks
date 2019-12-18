@@ -973,4 +973,35 @@ $_EXTCONF = $GLOBALS['TYPO3_CONF_VARS']['EXT']['extConf'][$_EXTKEY] ?? null;
 
 defined('TYPO3_MODE') || die();
 
+/**
+ * Extension: extension_builder
+ * File: /var/www/html/public/typo3conf/ext/extension_builder/ext_tables.php
+ */
+
+$_EXTKEY = 'extension_builder';
+$_EXTCONF = $GLOBALS['TYPO3_CONF_VARS']['EXT']['extConf'][$_EXTKEY] ?? null;
+
+
+defined('TYPO3_MODE') || die();
+
+if (TYPO3_MODE === 'BE') {
+    /**
+     * Register Backend Module
+     */
+    \TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerModule(
+        'EBT.ExtensionBuilder',
+        'tools',
+        'extensionbuilder',
+        '',
+        [
+            'BuilderModule' => 'index,domainmodelling,dispatchRpc',
+        ],
+        [
+            'access' => 'user,group',
+            'icon' => 'EXT:extension_builder/Resources/Public/Icons/Extension.svg',
+            'labels' => 'LLL:EXT:extension_builder/Resources/Private/Language/locallang_mod.xlf',
+        ]
+    );
+}
+
 #

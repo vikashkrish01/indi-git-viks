@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="EXT:hofexpress/Resources/Private/Language/locallang_csh" date="2019-12-18T13:37:10Z" product-name="hofexpress">
+		<header/>
+		<body>
+			<trans-unit id="name.description" resname="name.description">
+				<source>name</source>
+			</trans-unit>
+			<trans-unit id="description.description" resname="description.description">
+				<source>description</source>
+			</trans-unit>
+			<trans-unit id="logo.description" resname="logo.description">
+				<source>logo</source>
+			</trans-unit>
+			<trans-unit id="address.description" resname="address.description">
+				<source>address</source>
+			</trans-unit>
+			<trans-unit id="restaurant_type.description" resname="restaurant_type.description">
+				<source>restaurantType</source>
+			</trans-unit>
+			<trans-unit id="cover_image.description" resname="cover_image.description">
+				<source>coverImage</source>
+			</trans-unit>
+			<trans-unit id="menu.description" resname="menu.description">
+				<source>menu</source>
+			</trans-unit>
+			<trans-unit id="food.description" resname="food.description">
+				<source>food</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

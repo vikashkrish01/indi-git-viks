@@ -110,6 +110,10 @@ class ComposerStaticInit6fff64fcc21ce4541ecc03570f7a0d9d
             'GuzzleHttp\\Promise\\' => 19,
             'GuzzleHttp\\' => 11,
         ),
+        'E' => 
+        array (
+            'EBT\\ExtensionBuilder\\' => 21,
+        ),
         'D' => 
         array (
             'Doctrine\\Instantiator\\' => 22,
@@ -387,6 +391,10 @@ class ComposerStaticInit6fff64fcc21ce4541ecc03570f7a0d9d
         'GuzzleHttp\\' => 
         array (
             0 => __DIR__ . '/..' . '/guzzlehttp/guzzle/src',
+        ),
+        'EBT\\ExtensionBuilder\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/public/typo3conf/ext/extension_builder/Classes',
         ),
         'Doctrine\\Instantiator\\' => 
         array (

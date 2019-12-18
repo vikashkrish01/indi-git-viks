@@ -98,6 +98,9 @@ return [
         'hofexpress_package' => [
             'packagePath' => 'typo3conf/ext/hofexpress_package/',
         ],
+        'extension_builder' => [
+            'packagePath' => 'typo3conf/ext/extension_builder/',
+        ],
     ],
     'version' => 5,
 ];
