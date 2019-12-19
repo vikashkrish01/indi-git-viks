@@ -66,6 +66,7 @@ return array(
     'PhpParser\\' => array($vendorDir . '/nikic/php-parser/lib/PhpParser'),
     'Mso\\IdnaConvert\\' => array($vendorDir . '/algo26-matthias/idna-convert/src'),
     'Hulk\\Hofexpress\\' => array($baseDir . '/public/typo3conf/ext/hofexpress/Classes'),
+    'Hulk\\HofexpressApp\\' => array($baseDir . '/public/typo3conf/ext/hofexpress_app/Classes'),
     'Helhum\\Typo3Console\\' => array($vendorDir . '/helhum/typo3-console/Classes/Console', $vendorDir . '/helhum/typo3-console/Classes/Compatibility'),
     'Helhum\\Typo3ConsolePlugin\\' => array($vendorDir . '/helhum/typo3-console-plugin/src'),
     'Helhum\\ConfigLoader\\' => array($vendorDir . '/helhum/config-loader/src'),

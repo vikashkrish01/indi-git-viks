@@ -101,6 +101,7 @@ class ComposerStaticInit6fff64fcc21ce4541ecc03570f7a0d9d
         'H' => 
         array (
             'Hulk\\Hofexpress\\' => 16,
+            'Hulk\\HofexpressApp\\' => 19,
             'Helhum\\Typo3Console\\' => 20,
             'Helhum\\Typo3ConsolePlugin\\' => 26,
             'Helhum\\ConfigLoader\\' => 20,
@@ -371,6 +372,10 @@ class ComposerStaticInit6fff64fcc21ce4541ecc03570f7a0d9d
         'Hulk\\Hofexpress\\' => 
         array (
             0 => __DIR__ . '/../..' . '/public/typo3conf/ext/hofexpress/Classes',
+        ),
+        'Hulk\\HofexpressApp\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/public/typo3conf/ext/hofexpress_app/Classes',
         ),
         'Helhum\\Typo3Console\\' => 
         array (

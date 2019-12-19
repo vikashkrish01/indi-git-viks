@@ -104,6 +104,9 @@ return [
         'hofexpress' => [
             'packagePath' => 'typo3conf/ext/hofexpress/',
         ],
+        'hofexpress_app' => [
+            'packagePath' => 'typo3conf/ext/hofexpress_app/',
+        ],
     ],
     'version' => 5,
 ];

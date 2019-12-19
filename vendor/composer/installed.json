@@ -1167,6 +1167,41 @@
         }
     },
     {
+        "name": "hulk/hofexpress-app",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "dist": {
+            "type": "path",
+            "url": "packages/hofexpress_app",
+            "reference": "a28c250d7a8186c545f9e4bef34e768c0e0a76b9"
+        },
+        "require": {
+            "typo3/cms-core": "^9.5"
+        },
+        "replace": {
+            "hulk/hofexpress-app": "self.version",
+            "typo3-ter/hofexpress-app": "self.version"
+        },
+        "type": "typo3-cms-extension",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Hulk\\HofexpressApp\\": "Classes"
+            }
+        },
+        "autoload-dev": {
+            "psr-4": {
+                "Hulk\\HofexpressApp\\Tests\\": "Tests"
+            }
+        },
+        "authors": [
+            {
+                "name": "Hof Express",
+                "role": "Developer"
+            }
+        ]
+    },
+    {
         "name": "nikic/php-parser",
         "version": "v4.3.0",
         "version_normalized": "4.3.0.0",

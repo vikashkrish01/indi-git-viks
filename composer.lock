@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2edae4ad7e8ee3e8ba3819b275c358de",
+    "content-hash": "75ea6c745bbe83177b4fc2972ceca910",
     "packages": [
         {
             "name": "algo26-matthias/idna-convert",
@@ -1073,6 +1073,39 @@
                     "Hulk\\Hofexpress\\Tests\\": "Tests"
                 }
             }
+        },
+        {
+            "name": "hulk/hofexpress-app",
+            "version": "dev-master",
+            "dist": {
+                "type": "path",
+                "url": "packages/hofexpress_app",
+                "reference": "a28c250d7a8186c545f9e4bef34e768c0e0a76b9"
+            },
+            "require": {
+                "typo3/cms-core": "^9.5"
+            },
+            "replace": {
+                "hulk/hofexpress-app": "self.version",
+                "typo3-ter/hofexpress-app": "self.version"
+            },
+            "type": "typo3-cms-extension",
+            "autoload": {
+                "psr-4": {
+                    "Hulk\\HofexpressApp\\": "Classes"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "Hulk\\HofexpressApp\\Tests\\": "Tests"
+                }
+            },
+            "authors": [
+                {
+                    "name": "Hof Express",
+                    "role": "Developer"
+                }
+            ]
         },
         {
             "name": "nikic/php-parser",
@@ -4593,6 +4626,7 @@
     "minimum-stability": "stable",
     "stability-flags": {
         "hulk/hofexpress": 20,
+        "hulk/hofexpress-app": 20,
         "friendsoftypo3/extension-builder": 20
     },
     "prefer-stable": false,
