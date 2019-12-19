@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3b386d3aaa85d55daa043cdf3bd289d2",
+    "content-hash": "2edae4ad7e8ee3e8ba3819b275c358de",
     "packages": [
         {
             "name": "algo26-matthias/idna-convert",
@@ -1046,6 +1046,33 @@
                 "typo3 console"
             ],
             "time": "2018-12-09T12:06:13+00:00"
+        },
+        {
+            "name": "hulk/hofexpress",
+            "version": "dev-master",
+            "dist": {
+                "type": "path",
+                "url": "packages/hofexpress",
+                "reference": "e517811b8e22ba343f038725f8670bf77c838795"
+            },
+            "require": {
+                "typo3/cms-core": "^9.5"
+            },
+            "replace": {
+                "hulk/hofexpress": "self.version",
+                "typo3-ter/hofexpress": "self.version"
+            },
+            "type": "typo3-cms-extension",
+            "autoload": {
+                "psr-4": {
+                    "Hulk\\Hofexpress\\": "Classes"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "Hulk\\Hofexpress\\Tests\\": "Tests"
+                }
+            }
         },
         {
             "name": "nikic/php-parser",
@@ -4565,6 +4592,7 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
+        "hulk/hofexpress": 20,
         "friendsoftypo3/extension-builder": 20
     },
     "prefer-stable": false,

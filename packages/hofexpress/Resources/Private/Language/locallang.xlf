@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="en" datatype="plaintext" original="EXT:hofexpress/Resources/Private/Language/locallang" date="2019-12-18T14:29:56Z" product-name="hofexpress">
+	<file source-language="en" datatype="plaintext" original="EXT:hofexpress/Resources/Private/Language/locallang" date="2019-12-18T14:36:02Z" product-name="hofexpress">
 		<header/>
 		<body>
 			<trans-unit id="tx_hofexpress_domain_model_customer" resname="tx_hofexpress_domain_model_customer">

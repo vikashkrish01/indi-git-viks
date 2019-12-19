@@ -100,6 +100,7 @@ class ComposerStaticInit6fff64fcc21ce4541ecc03570f7a0d9d
         ),
         'H' => 
         array (
+            'Hulk\\Hofexpress\\' => 16,
             'Helhum\\Typo3Console\\' => 20,
             'Helhum\\Typo3ConsolePlugin\\' => 26,
             'Helhum\\ConfigLoader\\' => 20,
@@ -366,6 +367,10 @@ class ComposerStaticInit6fff64fcc21ce4541ecc03570f7a0d9d
         'Mso\\IdnaConvert\\' => 
         array (
             0 => __DIR__ . '/..' . '/algo26-matthias/idna-convert/src',
+        ),
+        'Hulk\\Hofexpress\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/public/typo3conf/ext/hofexpress/Classes',
         ),
         'Helhum\\Typo3Console\\' => 
         array (
