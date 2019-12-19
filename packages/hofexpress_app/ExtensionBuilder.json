@@ -85,7 +85,7 @@
             "value": {
                 "actionGroup": {
                     "_default0_list": true,
-                    "_default1_show": false,
+                    "_default1_show": true,
                     "_default2_new_create": true,
                     "_default3_edit_update": true,
                     "_default4_delete": true,
@@ -279,8 +279,8 @@
         {
             "config": {
                 "position": [
-                    129,
-                    357
+                    69,
+                    388
                 ]
             },
             "name": "New Model Object",
@@ -408,8 +408,8 @@
         {
             "config": {
                 "position": [
-                    422,
-                    37
+                    421,
+                    20
                 ]
             },
             "name": "New Model Object",
@@ -427,7 +427,7 @@
                     "addDeletedField": true,
                     "addHiddenField": true,
                     "addStarttimeEndtimeFields": true,
-                    "aggregateRoot": false,
+                    "aggregateRoot": true,
                     "categorizable": false,
                     "description": "",
                     "mapToTable": "",
@@ -534,7 +534,7 @@
                     "addDeletedField": true,
                     "addHiddenField": true,
                     "addStarttimeEndtimeFields": true,
-                    "aggregateRoot": false,
+                    "aggregateRoot": true,
                     "categorizable": false,
                     "description": "",
                     "mapToTable": "",
@@ -578,18 +578,18 @@
         {
             "config": {
                 "position": [
-                    928,
-                    52
+                    931,
+                    -8
                 ]
             },
             "name": "New Model Object",
             "value": {
                 "actionGroup": {
                     "_default0_list": true,
-                    "_default1_show": false,
+                    "_default1_show": true,
                     "_default2_new_create": true,
                     "_default3_edit_update": true,
-                    "_default4_delete": false,
+                    "_default4_delete": true,
                     "customActions": []
                 },
                 "name": "DeliveryType",
@@ -597,7 +597,7 @@
                     "addDeletedField": true,
                     "addHiddenField": true,
                     "addStarttimeEndtimeFields": true,
-                    "aggregateRoot": false,
+                    "aggregateRoot": true,
                     "categorizable": false,
                     "description": "",
                     "mapToTable": "",
@@ -607,7 +607,19 @@
                     "uid": "711298201235"
                 },
                 "propertyGroup": {
-                    "properties": []
+                    "properties": [
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "",
+                            "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
+                            "propertyIsRequired": false,
+                            "propertyName": "homeOrTakeType",
+                            "propertyType": "String",
+                            "uid": "597892793435"
+                        }
+                    ]
                 },
                 "relationGroup": {
                     "relations": []
@@ -625,7 +637,7 @@
             "value": {
                 "actionGroup": {
                     "_default0_list": true,
-                    "_default1_show": false,
+                    "_default1_show": true,
                     "_default2_new_create": true,
                     "_default3_edit_update": true,
                     "_default4_delete": true,
@@ -636,7 +648,7 @@
                     "addDeletedField": true,
                     "addHiddenField": true,
                     "addStarttimeEndtimeFields": true,
-                    "aggregateRoot": false,
+                    "aggregateRoot": true,
                     "categorizable": false,
                     "description": "",
                     "mapToTable": "",
@@ -646,7 +658,19 @@
                     "uid": "1544179248507"
                 },
                 "propertyGroup": {
-                    "properties": []
+                    "properties": [
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "",
+                            "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
+                            "propertyIsRequired": false,
+                            "propertyName": "selectFoodType",
+                            "propertyType": "String",
+                            "uid": "546977277503"
+                        }
+                    ]
                 },
                 "relationGroup": {
                     "relations": []
@@ -656,8 +680,8 @@
         {
             "config": {
                 "position": [
-                    382,
-                    343
+                    347,
+                    276
                 ]
             },
             "name": "New Model Object",
@@ -726,7 +750,7 @@
             "value": {
                 "actionGroup": {
                     "_default0_list": true,
-                    "_default1_show": false,
+                    "_default1_show": true,
                     "_default2_new_create": true,
                     "_default3_edit_update": true,
                     "_default4_delete": true,
@@ -737,7 +761,7 @@
                     "addDeletedField": true,
                     "addHiddenField": true,
                     "addStarttimeEndtimeFields": true,
-                    "aggregateRoot": false,
+                    "aggregateRoot": true,
                     "categorizable": false,
                     "description": "",
                     "mapToTable": "",
@@ -943,7 +967,7 @@
     ],
     "storagePath": "\/var\/www\/html\/packages\/",
     "log": {
-        "last_modified": "2019-12-19 12:48",
+        "last_modified": "2019-12-19 05:50",
         "extension_builder_version": "9.10.2",
         "be_user": " (1)"
     }

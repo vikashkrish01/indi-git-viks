@@ -21961,7 +21961,7 @@ return array (
       'ctrl' => 
       array (
         'title' => 'LLL:EXT:hofexpress_app/Resources/Private/Language/locallang_db.xlf:tx_hofexpressapp_domain_model_deliverytype',
-        'label' => 'uid',
+        'label' => 'home_or_take_type',
         'tstamp' => 'tstamp',
         'crdate' => 'crdate',
         'cruser_id' => 'cruser_id',
@@ -21976,18 +21976,18 @@ return array (
           'starttime' => 'starttime',
           'endtime' => 'endtime',
         ),
-        'searchFields' => '',
+        'searchFields' => 'home_or_take_type',
         'iconfile' => 'EXT:hofexpress_app/Resources/Public/Icons/tx_hofexpressapp_domain_model_deliverytype.gif',
       ),
       'interface' => 
       array (
-        'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, ',
+        'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, home_or_take_type',
       ),
       'types' => 
       array (
         1 => 
         array (
-          'showitem' => 'sys_language_uid,l10n_parent,l10n_diffsource,hidden,--div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access,starttime,endtime',
+          'showitem' => 'sys_language_uid,l10n_parent,l10n_diffsource,hidden,home_or_take_type,--div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access,starttime,endtime',
         ),
       ),
       'columns' => 
@@ -22105,6 +22105,17 @@ return array (
             array (
               'allowLanguageSynchronization' => true,
             ),
+          ),
+        ),
+        'home_or_take_type' => 
+        array (
+          'exclude' => true,
+          'label' => 'LLL:EXT:hofexpress_app/Resources/Private/Language/locallang_db.xlf:tx_hofexpressapp_domain_model_deliverytype.home_or_take_type',
+          'config' => 
+          array (
+            'type' => 'input',
+            'size' => 30,
+            'eval' => 'trim',
           ),
         ),
       ),
@@ -22455,7 +22466,7 @@ return array (
       'ctrl' => 
       array (
         'title' => 'LLL:EXT:hofexpress_app/Resources/Private/Language/locallang_db.xlf:tx_hofexpressapp_domain_model_foodtype',
-        'label' => 'uid',
+        'label' => 'select_food_type',
         'tstamp' => 'tstamp',
         'crdate' => 'crdate',
         'cruser_id' => 'cruser_id',
@@ -22470,18 +22481,18 @@ return array (
           'starttime' => 'starttime',
           'endtime' => 'endtime',
         ),
-        'searchFields' => '',
+        'searchFields' => 'select_food_type',
         'iconfile' => 'EXT:hofexpress_app/Resources/Public/Icons/tx_hofexpressapp_domain_model_foodtype.gif',
       ),
       'interface' => 
       array (
-        'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, ',
+        'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, select_food_type',
       ),
       'types' => 
       array (
         1 => 
         array (
-          'showitem' => 'sys_language_uid,l10n_parent,l10n_diffsource,hidden,--div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access,starttime,endtime',
+          'showitem' => 'sys_language_uid,l10n_parent,l10n_diffsource,hidden,select_food_type,--div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access,starttime,endtime',
         ),
       ),
       'columns' => 
@@ -22599,6 +22610,17 @@ return array (
             array (
               'allowLanguageSynchronization' => true,
             ),
+          ),
+        ),
+        'select_food_type' => 
+        array (
+          'exclude' => true,
+          'label' => 'LLL:EXT:hofexpress_app/Resources/Private/Language/locallang_db.xlf:tx_hofexpressapp_domain_model_foodtype.select_food_type',
+          'config' => 
+          array (
+            'type' => 'input',
+            'size' => 30,
+            'eval' => 'trim',
           ),
         ),
       ),

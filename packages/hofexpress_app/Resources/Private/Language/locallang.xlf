@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="en" datatype="plaintext" original="EXT:hofexpress_app/Resources/Private/Language/locallang" date="2019-12-19T12:48:21Z" product-name="hofexpress_app">
+	<file source-language="en" datatype="plaintext" original="EXT:hofexpress_app/Resources/Private/Language/locallang" date="2019-12-19T17:50:04Z" product-name="hofexpress_app">
 		<header/>
 		<body>
 			<trans-unit id="tx_hofexpressapp_domain_model_customer" resname="tx_hofexpressapp_domain_model_customer">
@@ -114,8 +114,14 @@
 			<trans-unit id="tx_hofexpressapp_domain_model_deliverytype" resname="tx_hofexpressapp_domain_model_deliverytype">
 				<source>Delivery Type</source>
 			</trans-unit>
+			<trans-unit id="tx_hofexpressapp_domain_model_deliverytype.home_or_take_type" resname="tx_hofexpressapp_domain_model_deliverytype.home_or_take_type">
+				<source>Home Or Take Type</source>
+			</trans-unit>
 			<trans-unit id="tx_hofexpressapp_domain_model_foodtype" resname="tx_hofexpressapp_domain_model_foodtype">
 				<source>Food Type</source>
+			</trans-unit>
+			<trans-unit id="tx_hofexpressapp_domain_model_foodtype.select_food_type" resname="tx_hofexpressapp_domain_model_foodtype.select_food_type">
+				<source>Select Food Type</source>
 			</trans-unit>
 			<trans-unit id="tx_hofexpressapp_domain_model_restaurantmenu" resname="tx_hofexpressapp_domain_model_restaurantmenu">
 				<source>Restaurant Menu</source>

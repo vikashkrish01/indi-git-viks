@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="EXT:hofexpress_app/Resources/Private/Language/locallang_csh" date="2019-12-19T17:47:19Z" product-name="hofexpress_app">
+		<header/>
+		<body>
+			<trans-unit id="select_food_type.description" resname="select_food_type.description">
+				<source>selectFoodType</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

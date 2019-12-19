@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="EXT:hofexpress_app/Resources/Private/Language/locallang_csh" date="2019-12-19T12:48:21Z" product-name="hofexpress_app">
+		<header/>
+		<body>
+			<trans-unit id="name.description" resname="name.description">
+				<source>name</source>
+			</trans-unit>
+			<trans-unit id="street.description" resname="street.description">
+				<source>street</source>
+			</trans-unit>
+			<trans-unit id="region.description" resname="region.description">
+				<source>region</source>
+			</trans-unit>
+			<trans-unit id="zipcode.description" resname="zipcode.description">
+				<source>zipcode</source>
+			</trans-unit>
+			<trans-unit id="house_number.description" resname="house_number.description">
+				<source>houseNumber</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

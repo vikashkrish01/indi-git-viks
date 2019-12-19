@@ -1671,15 +1671,15 @@ call_user_func(
             'Hofexpress',
             [
                 'Customer' => 'list, show, new, create, edit, update, delete',
-                'Address' => 'list, new, create, edit, update, delete',
+                'Address' => 'list, show, new, create, edit, update, delete',
                 'Food' => 'list, show, new, create, edit, update, delete',
                 'Restaurant' => 'list, show, new, create, edit, update, delete',
                 'Order' => 'list, show, new, create, edit, update, delete',
                 'OrderItems' => 'list, show, new, create, edit, update, delete',
-                'DeliveryType' => 'list, new, create, edit, update',
-                'FoodType' => 'list, new, create, edit, update, delete',
+                'DeliveryType' => 'list, show, new, create, edit, update, delete',
+                'FoodType' => 'list, show, new, create, edit, update, delete',
                 'RestaurantMenu' => 'list, show, new, create, edit, update, delete',
-                'OrderStatus' => 'list, new, create, edit, update, delete'
+                'OrderStatus' => 'list, show, new, create, edit, update, delete'
             ],
             // non-cacheable actions
             [
@@ -1689,7 +1689,7 @@ call_user_func(
                 'Restaurant' => 'create, update, delete',
                 'Order' => 'create, update, delete',
                 'OrderItems' => 'create, update, delete',
-                'DeliveryType' => 'create, update',
+                'DeliveryType' => 'create, update, delete',
                 'FoodType' => 'create, update, delete',
                 'RestaurantMenu' => 'create, update, delete',
                 'OrderStatus' => 'create, update, delete'
