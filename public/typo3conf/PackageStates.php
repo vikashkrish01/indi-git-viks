@@ -101,9 +101,6 @@ return [
         'extension_builder' => [
             'packagePath' => 'typo3conf/ext/extension_builder/',
         ],
-        'hofexpress' => [
-            'packagePath' => 'typo3conf/ext/hofexpress/',
-        ],
         'hofexpress_app' => [
             'packagePath' => 'typo3conf/ext/hofexpress_app/',
         ],

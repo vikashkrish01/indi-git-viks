@@ -579,7 +579,7 @@
             "config": {
                 "position": [
                     931,
-                    -8
+                    10
                 ]
             },
             "name": "New Model Object",
@@ -819,7 +819,7 @@
         },
         "extensionKey": "hofexpress_app",
         "name": "HofExpress",
-        "originalExtensionKey": "hofexpress",
+        "originalExtensionKey": "hofexpress_app",
         "originalVendorName": "Hulk",
         "persons": [
             {
@@ -967,7 +967,7 @@
     ],
     "storagePath": "\/var\/www\/html\/packages\/",
     "log": {
-        "last_modified": "2019-12-19 05:50",
+        "last_modified": "2019-12-20 06:02",
         "extension_builder_version": "9.10.2",
         "be_user": " (1)"
     }

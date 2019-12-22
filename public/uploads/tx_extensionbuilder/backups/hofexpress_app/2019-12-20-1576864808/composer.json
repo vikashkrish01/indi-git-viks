@@ -1,0 +1,28 @@
+{
+    "name": "hulk/hofexpress-app",
+    "type": "typo3-cms-extension",
+    "description": "",
+    "authors": [
+        {
+            "name": "Hof Express",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "typo3/cms-core": "^9.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Hulk\\HofexpressApp\\": "Classes"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Hulk\\HofexpressApp\\Tests\\": "Tests"
+        }
+    },
+    "replace": {
+        "hulk/hofexpress-app": "self.version",
+        "typo3-ter/hofexpress-app": "self.version"
+    }
+}

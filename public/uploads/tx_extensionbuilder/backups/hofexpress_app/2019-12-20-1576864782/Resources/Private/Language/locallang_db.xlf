@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="EXT:hofexpress_app/Resources/Private/Language/locallang_db" date="2019-12-19T17:50:04Z" product-name="hofexpress_app">
+		<header/>
+		<body>
+			<trans-unit id="tx_hofexpressapp_domain_model_customer" resname="tx_hofexpressapp_domain_model_customer">
+				<source>Customer</source>
+			</trans-unit>
+			<trans-unit id="tx_hofexpressapp_domain_model_customer.user_id" resname="tx_hofexpressapp_domain_model_customer.user_id">
+				<source>User Id</source>
+			</trans-unit>
+			<trans-unit id="tx_hofexpressapp_domain_model_customer.phone_number" resname="tx_hofexpressapp_domain_model_customer.phone_number">
+				<source>Phone Number</source>
+			</trans-unit>
+			<trans-unit id="tx_hofexpressapp_domain_model_customer.address" resname="tx_hofexpressapp_domain_model_customer.address">
+				<source>Address</source>
+			</trans-unit>
+			<trans-unit id="tx_hofexpressapp_domain_model_address" resname="tx_hofexpressapp_domain_model_address">
+				<source>Address</source>
+			</trans-unit>
+			<trans-unit id="tx_hofexpressapp_domain_model_address.name" resname="tx_hofexpressapp_domain_model_address.name">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="tx_hofexpressapp_domain_model_address.street" resname="tx_hofexpressapp_domain_model_address.street">
+				<source>Street</source>
+			</trans-unit>
+			<trans-unit id="tx_hofexpressapp_domain_model_address.region" resname="tx_hofexpressapp_domain_model_address.region">
+				<source>Region</source>
+			</trans-unit>
+			<trans-unit id="tx_hofexpressapp_domain_model_address.zipcode" resname="tx_hofexpressapp_domain_model_address.zipcode">
+				<source>Zipcode</source>
+			</trans-unit>
+			<trans-unit id="tx_hofexpressapp_domain_model_address.house_number" resname="tx_hofexpressapp_domain_model_address.house_number">
+				<source>House Number</source>
+			</trans-unit>
+			<trans-unit id="tx_hofexpressapp_domain_model_food" resname="tx_hofexpressapp_domain_model_food">
+				<source>Food</source>
+			</trans-unit>
+			<trans-unit id="tx_hofexpressapp_domain_model_food.food_name" resname="tx_hofexpressapp_domain_model_food.food_name">
+				<source>Food Name</source>
+			</trans-unit>
+			<trans-unit id="tx_hofexpressapp_domain_model_food.price" resname="tx_hofexpressapp_domain_model_food.price">
+				<source>Price</source>
+			</trans-unit>
+			<trans-unit id="tx_hofexpressapp_domain_model_food.food_type" resname="tx_hofexpressapp_domain_model_food.food_type">
+				<source>Food Type</source>
+			</trans-unit>
+			<trans-unit id="tx_hofexpressapp_domain_model_food.image" resname="tx_hofexpressapp_domain_model_food.image">
+				<source>Image</source>
+			</trans-unit>
+			<trans-unit id="tx_hofexpressapp_domain_model_food.foodmenu" resname="tx_hofexpressapp_domain_model_food.foodmenu">
+				<source>Foodmenu</source>
+			</trans-unit>
+			<trans-unit id="tx_hofexpressapp_domain_model_food.food_types" resname="tx_hofexpressapp_domain_model_food.food_types">
+				<source>Food Types</source>
+			</trans-unit>
+			<trans-unit id="tx_hofexpressapp_domain_model_restaurant" resname="tx_hofexpressapp_domain_model_restaurant">
+				<source>Restaurant</source>
+			</trans-unit>
+			<trans-unit id="tx_hofexpressapp_domain_model_restaurant.name" resname="tx_hofexpressapp_domain_model_restaurant.name">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="tx_hofexpressapp_domain_model_restaurant.description" resname="tx_hofexpressapp_domain_model_restaurant.description">
+				<source>Description</source>
+			</trans-unit>
+			<trans-unit id="tx_hofexpressapp_domain_model_restaurant.logo" resname="tx_hofexpressapp_domain_model_restaurant.logo">
+				<source>Logo</source>
+			</trans-unit>
+			<trans-unit id="tx_hofexpressapp_domain_model_restaurant.address" resname="tx_hofexpressapp_domain_model_restaurant.address">
+				<source>Address</source>
+			</trans-unit>
+			<trans-unit id="tx_hofexpressapp_domain_model_restaurant.restaurant_type" resname="tx_hofexpressapp_domain_model_restaurant.restaurant_type">
+				<source>Restaurant Type</source>
+			</trans-unit>
+			<trans-unit id="tx_hofexpressapp_domain_model_restaurant.cover_image" resname="tx_hofexpressapp_domain_model_restaurant.cover_image">
+				<source>Cover Image</source>
+			</trans-unit>
+			<trans-unit id="tx_hofexpressapp_domain_model_restaurant.menu" resname="tx_hofexpressapp_domain_model_restaurant.menu">
+				<source>Menu</source>
+			</trans-unit>
+			<trans-unit id="tx_hofexpressapp_domain_model_restaurant.food" resname="tx_hofexpressapp_domain_model_restaurant.food">
+				<source>Food</source>
+			</trans-unit>
+			<trans-unit id="tx_hofexpressapp_domain_model_order" resname="tx_hofexpressapp_domain_model_order">
+				<source>Order</source>
+			</trans-unit>
+			<trans-unit id="tx_hofexpressapp_domain_model_order.total_amount" resname="tx_hofexpressapp_domain_model_order.total_amount">
+				<source>Total Amount</source>
+			</trans-unit>
+			<trans-unit id="tx_hofexpressapp_domain_model_order.status" resname="tx_hofexpressapp_domain_model_order.status">
+				<source>Status</source>
+			</trans-unit>
+			<trans-unit id="tx_hofexpressapp_domain_model_order.order_status" resname="tx_hofexpressapp_domain_model_order.order_status">
+				<source>Order Status</source>
+			</trans-unit>
+			<trans-unit id="tx_hofexpressapp_domain_model_order.delivery" resname="tx_hofexpressapp_domain_model_order.delivery">
+				<source>Delivery</source>
+			</trans-unit>
+			<trans-unit id="tx_hofexpressapp_domain_model_order.customer" resname="tx_hofexpressapp_domain_model_order.customer">
+				<source>Customer</source>
+			</trans-unit>
+			<trans-unit id="tx_hofexpressapp_domain_model_order.order_items" resname="tx_hofexpressapp_domain_model_order.order_items">
+				<source>Order Items</source>
+			</trans-unit>
+			<trans-unit id="tx_hofexpressapp_domain_model_orderitems" resname="tx_hofexpressapp_domain_model_orderitems">
+				<source>Order Items</source>
+			</trans-unit>
+			<trans-unit id="tx_hofexpressapp_domain_model_orderitems.quantity" resname="tx_hofexpressapp_domain_model_orderitems.quantity">
+				<source>Quantity</source>
+			</trans-unit>
+			<trans-unit id="tx_hofexpressapp_domain_model_orderitems.food" resname="tx_hofexpressapp_domain_model_orderitems.food">
+				<source>Food</source>
+			</trans-unit>
+			<trans-unit id="tx_hofexpressapp_domain_model_deliverytype" resname="tx_hofexpressapp_domain_model_deliverytype">
+				<source>Delivery Type</source>
+			</trans-unit>
+			<trans-unit id="tx_hofexpressapp_domain_model_deliverytype.home_or_take_type" resname="tx_hofexpressapp_domain_model_deliverytype.home_or_take_type">
+				<source>Home Or Take Type</source>
+			</trans-unit>
+			<trans-unit id="tx_hofexpressapp_domain_model_foodtype" resname="tx_hofexpressapp_domain_model_foodtype">
+				<source>Food Type</source>
+			</trans-unit>
+			<trans-unit id="tx_hofexpressapp_domain_model_foodtype.select_food_type" resname="tx_hofexpressapp_domain_model_foodtype.select_food_type">
+				<source>Select Food Type</source>
+			</trans-unit>
+			<trans-unit id="tx_hofexpressapp_domain_model_restaurantmenu" resname="tx_hofexpressapp_domain_model_restaurantmenu">
+				<source>Restaurant Menu</source>
+			</trans-unit>
+			<trans-unit id="tx_hofexpressapp_domain_model_restaurantmenu.name" resname="tx_hofexpressapp_domain_model_restaurantmenu.name">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="tx_hofexpressapp_domain_model_restaurantmenu.description" resname="tx_hofexpressapp_domain_model_restaurantmenu.description">
+				<source>Description</source>
+			</trans-unit>
+			<trans-unit id="tx_hofexpressapp_domain_model_orderstatus" resname="tx_hofexpressapp_domain_model_orderstatus">
+				<source>Order Status</source>
+			</trans-unit>
+			<trans-unit id="tx_hofexpressapp_domain_model_orderstatus.name" resname="tx_hofexpressapp_domain_model_orderstatus.name">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="tx_hofexpressapp_domain_model_orderstatus.description" resname="tx_hofexpressapp_domain_model_orderstatus.description">
+				<source>Description</source>
+			</trans-unit>
+			<trans-unit id="tx_hofexpress_app_hofexpress.name" resname="tx_hofexpress_app_hofexpress.name">
+				<source>HofExpress</source>
+			</trans-unit>
+			<trans-unit id="tx_hofexpress_app_hofexpress.description" resname="tx_hofexpress_app_hofexpress.description">
+				<source></source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>
