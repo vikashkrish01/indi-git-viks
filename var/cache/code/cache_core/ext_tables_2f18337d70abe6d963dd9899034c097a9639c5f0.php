@@ -1025,6 +1025,12 @@ call_user_func(
             'HofExpress'
         );
 
+
+        \TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin(
+            'Hulk.HofexpressApp',
+            'RestaurantListPlugin',
+            'RestaurantListPlugin'
+        );
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile('hofexpress_app', 'Configuration/TypoScript', 'HofExpress');
 
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addLLrefForTCAdescr('tx_hofexpressapp_domain_model_customer', 'EXT:hofexpress_app/Resources/Private/Language/locallang_csh_tx_hofexpressapp_domain_model_customer.xlf');

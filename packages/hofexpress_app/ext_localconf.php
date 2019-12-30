@@ -35,6 +35,22 @@ call_user_func(
             ]
         );
 
+
+        \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
+            'Hulk.HofexpressApp',
+            'RestaurantListPlugin',
+            [
+
+                'Restaurant' => 'list, show, new, create, edit, update, delete'
+            ],
+            // non-cacheable actions
+            [
+
+                'Restaurant' => 'create, update, delete'
+            ]
+        );
+
+
         // wizards
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
             'mod {
@@ -47,6 +63,16 @@ call_user_func(
                             tt_content_defValues {
                                 CType = list
                                 list_type = hofexpressapp_hofexpress
+                            }
+                        }
+                        
+                          restaurantList {
+                            iconIdentifier = hofexpress_app-plugin-hofexpress
+                            title = Restaurant List
+                            description = Contents Restaurants
+                            tt_content_defValues {
+                                CType = list
+                                list_type = hofexpressapp_restaurantList
                             }
                         }
                     }

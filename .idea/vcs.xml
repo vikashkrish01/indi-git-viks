@@ -2,5 +2,28 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/packages/hofexpress_app" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/public/typo3conf/ext/extension_builder" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/public/typo3conf/ext/hofexpress_app" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/public/uploads/tx_extensionbuilder/backups/hofexpress/2019-12-18-1576669806" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/public/uploads/tx_extensionbuilder/backups/hofexpress/2019-12-18-1576670781" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/public/uploads/tx_extensionbuilder/backups/hofexpress/2019-12-18-1576673726" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/public/uploads/tx_extensionbuilder/backups/hofexpress/2019-12-18-1576674795" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/public/uploads/tx_extensionbuilder/backups/hofexpress/2019-12-18-1576675713" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/public/uploads/tx_extensionbuilder/backups/hofexpress/2019-12-18-1576675910" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/public/uploads/tx_extensionbuilder/backups/hofexpress/2019-12-18-1576676231" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/public/uploads/tx_extensionbuilder/backups/hofexpress/2019-12-18-1576677066" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/public/uploads/tx_extensionbuilder/backups/hofexpress/2019-12-18-1576677607" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/public/uploads/tx_extensionbuilder/backups/hofexpress/2019-12-18-1576679174" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/public/uploads/tx_extensionbuilder/backups/hofexpress/2019-12-18-1576679337" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/public/uploads/tx_extensionbuilder/backups/hofexpress/2019-12-18-1576679369" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/public/uploads/tx_extensionbuilder/backups/hofexpress/2019-12-18-1576679397" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/public/uploads/tx_extensionbuilder/backups/hofexpress/2019-12-18-1576679763" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/public/uploads/tx_extensionbuilder/backups/hofexpress_app/2019-12-19-1576759702" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/public/uploads/tx_extensionbuilder/backups/hofexpress_app/2019-12-19-1576777640" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/public/uploads/tx_extensionbuilder/backups/hofexpress_app/2019-12-19-1576777805" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/public/uploads/tx_extensionbuilder/backups/hofexpress_app/2019-12-20-1576864782" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/public/uploads/tx_extensionbuilder/backups/hofexpress_app/2019-12-20-1576864808" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/public/uploads/tx_extensionbuilder/backups/hofexpress_app/2019-12-20-1576864966" vcs="Git" />
   </component>
 </project>
