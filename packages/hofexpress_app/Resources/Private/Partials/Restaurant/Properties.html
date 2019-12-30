@@ -21,7 +21,14 @@
 			<f:translate key="tx_hofexpressapp_domain_model_restaurant.logo" />
 		</td>
 		<td>
-				<f:image src="{restaurant.logo.originalResource.publicUrl}" width="200"/>
+			<f:if condition="{restaurant.logo}">
+				<f:then>
+					<f:image src="{restaurant.logo.originalResource.publicUrl}" width="200"/>
+				</f:then>
+				<f:else>
+					No photo given...
+				</f:else>
+			</f:if>
 		</td>
 	</tr>
 	<tr>
@@ -45,7 +52,15 @@
 			<f:translate key="tx_hofexpressapp_domain_model_restaurant.cover_image" />
 		</td>
 		<td>
-				<f:image src="{restaurant.coverImage.originalResource.publicUrl}" width="200"/>
+			<f:if condition="{restaurant.coverImage}">
+				<f:then>
+					<f:image src="{restaurant.coverImage.originalResource.publicUrl}" width="200"/>
+				</f:then>
+				<f:else>
+					No photo given...
+				</f:else>
+			</f:if>
+
 		</td>
 	</tr>
 </table>
