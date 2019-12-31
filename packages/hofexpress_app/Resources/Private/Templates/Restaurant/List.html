@@ -13,18 +13,14 @@ in /Configuration/ExtensionBuilder/settings.yaml:
 Otherwise your changes will be overwritten the next time you save the extension in the extension builder
 
 <f:section name="content">
-    <h1>Listing for Restaurant</h1>
+    <h1>Lists Of Restaurants</h1>
 
     <f:flashMessages />
 
     <table  class="tx_hofexpressapp" >
         <tr>
             <th><f:translate key="tx_hofexpressapp_domain_model_restaurant.name" /></th>
-            <th><f:translate key="tx_hofexpressapp_domain_model_restaurant.description" /></th>
-            <th><f:translate key="tx_hofexpressapp_domain_model_restaurant.logo" /></th>
-            <th><f:translate key="tx_hofexpressapp_domain_model_restaurant.address" /></th>
             <th><f:translate key="tx_hofexpressapp_domain_model_restaurant.restaurant_type" /></th>
-            <th><f:translate key="tx_hofexpressapp_domain_model_restaurant.cover_image" /></th>
             <th> </th>
             <th> </th>
         </tr>
@@ -32,11 +28,7 @@ Otherwise your changes will be overwritten the next time you save the extension 
         <f:for each="{restaurants}" as="restaurant">
             <tr>
                 <td><f:link.action action="show" arguments="{restaurant : restaurant}">{restaurant.name}</f:link.action></td>
-                <td><f:link.action action="show" arguments="{restaurant : restaurant}">{restaurant.description}</f:link.action></td>
-                <td><f:link.action action="show" arguments="{restaurant : restaurant}">{restaurant.logo.originalResource.name}</f:link.action></td>
-                <td><f:link.action action="show" arguments="{restaurant : restaurant}">{restaurant.address}</f:link.action></td>
                 <td><f:link.action action="show" arguments="{restaurant : restaurant}">{restaurant.restaurantType}</f:link.action></td>
-                <td><f:link.action action="show" arguments="{restaurant : restaurant}">{restaurant.coverImage.originalResource.name}</f:link.action></td>
                 <td><f:link.action action="edit" arguments="{restaurant : restaurant}">Edit</f:link.action></td>
                 <td><f:link.action action="delete" arguments="{restaurant : restaurant}">Delete</f:link.action></td>
             </tr>
