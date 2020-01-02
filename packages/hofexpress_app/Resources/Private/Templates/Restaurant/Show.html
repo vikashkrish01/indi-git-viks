@@ -13,7 +13,7 @@ Show.html: keep
 Otherwise your changes will be overwritten the next time you save the extension in the extension builder
 
 <f:section name="content">
-    <h1>Restaurant Details</h1>
+    <h2>Restaurant Details</h2>
     <div class="row mb-3">
         <div claas="col-3">
             <f:if condition="{restaurant.logo}">
@@ -50,10 +50,14 @@ Otherwise your changes will be overwritten the next time you save the extension 
 
                 :    {restaurant.restaurantType}
             </strong>
+            <p>
+                <f:link.action action="show" controller="RestaurantMenu" arguments="{restaurantMenu :restaurantMenu}">
+                    {restaurantMenu.name}
+                </f:link.action>
+            </p>
         </div>
     </div>
     <f:link.action action="list">Back to list</f:link.action>
     <br/>
-    <f:link.action action="new">New Restaurant</f:link.action>
 </f:section>
 </html>
