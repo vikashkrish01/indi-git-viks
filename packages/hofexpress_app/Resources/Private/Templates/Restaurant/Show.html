@@ -1,23 +1,63 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
-<f:layout name="Default" />
+<f:layout name="Default"/>
 
 This Template is responsible for displaying a single view for a domain object
 
 If you modify this template, do not forget to change the overwrite settings
 in /Configuration/ExtensionBuilder/settings.yaml:
-  Resources:
-    Private:
-      Templates:
-        Show.html: keep
+Resources:
+Private:
+Templates:
+Show.html: keep
 
 Otherwise your changes will be overwritten the next time you save the extension in the extension builder
 
 <f:section name="content">
-    <h1>Single View for Restaurant</h1>
+    <h2>Restaurant Details</h2>
+    <div class="row mb-3">
+        <div claas="col-3">
+            <f:if condition="{restaurant.logo}">
+                <f:then>
+                    <f:image src="{restaurant.logo.originalResource.publicUrl}" width="200"/>
+                </f:then>
+                <f:else>
+                    No photo given...
+                </f:else>
+            </f:if>
+        </div>
+        <div class="col-6">
 
-    <f:flashMessages />
-    <f:render partial="Restaurant/Properties" arguments="{restaurant:restaurant}" />
-    <f:link.action action="list">Back to list</f:link.action><br />
-    <f:link.action action="new">New Restaurant</f:link.action>
+                <p>
+                    <f:translate key="tx_hofexpressapp_domain_model_restaurant.name"/>
+
+                    : {restaurant.name}
+                </p>
+            <p>
+
+                    <f:translate key="tx_hofexpressapp_domain_model_restaurant.description"/>
+
+               : {restaurant.description -> f:format.html()}
+            </p>
+            <p>
+                    <f:translate key="tx_hofexpressapp_domain_model_restaurant.address"/>
+
+                :    {restaurant.address}
+            </p>
+        </div>
+        <div class="col-3">
+            <strong>
+                    <f:translate key="tx_hofexpressapp_domain_model_restaurant.restaurant_type"/>
+
+                :    {restaurant.restaurantType}
+            </strong>
+            <p>
+                <f:link.action action="show" controller="RestaurantMenu" arguments="{restaurantMenu :restaurantMenu}">
+                    {restaurantMenu.name}
+                </f:link.action>
+            </p>
+        </div>
+    </div>
+    <f:link.action action="list">Back to list</f:link.action>
+    <br/>
 </f:section>
 </html>
