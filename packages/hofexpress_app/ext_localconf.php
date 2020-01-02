@@ -41,12 +41,14 @@ call_user_func(
             'RestaurantListPlugin',
             [
 
-                'Restaurant' => 'list, show, new, create, edit, update, delete'
+                'Restaurant' => 'list, show, new, create, edit, update, delete',
+                'RestaurantMenu' => 'list, show, new, create, edit, update, delete'
             ],
             // non-cacheable actions
             [
 
-                'Restaurant' => 'create, update, delete'
+                'Restaurant' => 'create, update, delete',
+                'RestaurantMenu' => 'list, show, new, create, edit, update, delete'
             ]
         );
 
