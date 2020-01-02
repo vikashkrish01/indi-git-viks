@@ -2,6 +2,8 @@
 namespace Hulk\HofexpressApp\Controller;
 
 
+use Hulk\HofexpressApp\Domain\Model\RestaurantMenu;
+
 /***
  *
  * This file is part of the "HofExpress" Extension for TYPO3 CMS.
@@ -46,6 +48,7 @@ class RestaurantController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContr
     public function showAction(\Hulk\HofexpressApp\Domain\Model\Restaurant $restaurant)
     {
         $this->view->assign('restaurant', $restaurant);
+        $this->view->assign('restaurantMenu', $restaurant->getMenu());
     }
 
     /**
