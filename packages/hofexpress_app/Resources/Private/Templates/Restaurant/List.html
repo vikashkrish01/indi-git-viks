@@ -19,11 +19,18 @@ Otherwise your changes will be overwritten the next time you save the extension 
               <h2>Lists Of Restaurants</h2>
           </div>
           <div class="col-6">
-              <form>
-                  <input type="text" class="form-control" placeholder="search">
-              </form>
+              <f:form action="list" controller="Restaurant">
+                  <f:form.textfield name="search" class="form-control" placeholder="search"/>
+              </f:form>
           </div>
       </div>
+
+    <f:if condition="{search}">
+        <div class="alert alert-info">
+            Searched for "{search} , found {restaurants-> f:count()} results"
+        </div>
+    </f:if>
+
     <f:for each="{restaurants}" as="restaurant">
       <div class="row">
           <div class="col-3">

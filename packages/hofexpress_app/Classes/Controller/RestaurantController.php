@@ -3,6 +3,7 @@ namespace Hulk\HofexpressApp\Controller;
 
 
 use Hulk\HofexpressApp\Domain\Model\RestaurantMenu;
+use Hulk\HofexpressApp\Domain\Model\Food;
 
 /***
  *
@@ -30,12 +31,17 @@ class RestaurantController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContr
     /**
      * action list
      * 
-     * @param Hulk\HofexpressApp\Domain\Model\Restaurant
+     * @param string $search
      * @return void
      */
-    public function listAction()
+    public function listAction(string $search = null)
     {
-        $restaurants = $this->restaurantRepository->findAll();
+        if($search === null){
+            $restaurants = $this->restaurantRepository->findAll();
+        }else{
+            $restaurants = $this->restaurantRepository->findBySearch($search);
+        }
+        $this->view->assign('search', $search);
         $this->view->assign('restaurants', $restaurants);
     }
 
@@ -49,6 +55,7 @@ class RestaurantController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContr
     {
         $this->view->assign('restaurant', $restaurant);
         $this->view->assign('restaurantMenu', $restaurant->getMenu());
+        $this->view->assign('food', $restaurant->getFood());
     }
 
     /**

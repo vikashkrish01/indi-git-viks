@@ -42,13 +42,15 @@ call_user_func(
             [
 
                 'Restaurant' => 'list, show, new, create, edit, update, delete',
-                'RestaurantMenu' => 'list, show, new, create, edit, update, delete'
+                'RestaurantMenu' => 'list, show, new, create, edit, update, delete',
+                'Food' => 'show, new, create, edit, update, delete'
             ],
             // non-cacheable actions
             [
 
-                'Restaurant' => 'create, update, delete',
-                'RestaurantMenu' => 'list, show, new, create, edit, update, delete'
+                'Restaurant' => 'list,create, update, delete',
+                'RestaurantMenu' => 'list, show, new, create, edit, update, delete',
+                'Food' => 'show, new, create, edit, update, delete'
             ]
         );
 

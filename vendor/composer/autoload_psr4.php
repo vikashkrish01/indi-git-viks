@@ -31,6 +31,7 @@ return array(
     'TYPO3\\CMS\\Form\\' => array($baseDir . '/public/typo3/sysext/form/Classes'),
     'TYPO3\\CMS\\Fluid\\' => array($baseDir . '/public/typo3/sysext/fluid/Classes'),
     'TYPO3\\CMS\\Filelist\\' => array($baseDir . '/public/typo3/sysext/filelist/Classes'),
+    'TYPO3\\CMS\\Felogin\\' => array($baseDir . '/public/typo3/sysext/felogin/Classes'),
     'TYPO3\\CMS\\Extensionmanager\\' => array($baseDir . '/public/typo3/sysext/extensionmanager/Classes'),
     'TYPO3\\CMS\\Extbase\\' => array($baseDir . '/public/typo3/sysext/extbase/Classes'),
     'TYPO3\\CMS\\Core\\' => array($baseDir . '/public/typo3/sysext/core/Classes'),

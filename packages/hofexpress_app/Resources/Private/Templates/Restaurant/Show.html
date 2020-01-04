@@ -57,6 +57,46 @@ Otherwise your changes will be overwritten the next time you save the extension 
             </p>
         </div>
     </div>
+    <h2>Menu list</h2>
+    <div>
+
+        <table style="width:100%">
+            <tr>
+                <th><f:translate key="tx_hofexpressapp_domain_model_food.image" /></th>
+                <th><f:translate key="tx_hofexpressapp_domain_model_food.food_name" /></th>
+                <th><f:translate key="tx_hofexpressapp_domain_model_food.price" /></th>
+                <th>Quantity</th>
+            </tr>
+            <f:for each="{restaurant.food}" as="food">
+            <tr>
+
+                <td>
+                    <f:if condition="{food.image}">
+                        <f:then>
+                            <f:image src="{food.logo.originalResource.publicUrl}" maxWidth="200" maxHeight="200"/>
+                        </f:then>
+                        <f:else>
+                            No photo given...
+                        </f:else>
+                    </f:if>
+                </td>
+                <td>
+                    <f:link.action action="show" controller="Food" arguments="{food :food}">
+                        {food.foodName}
+                    </f:link.action>
+                </td>
+                <td>
+                    <f:link.action action="show" controller="Food" arguments="{food :food}">
+                        {food.price -> f:format.currency(currencySign: '€')}
+                    </f:link.action>
+                </td>
+                <td>
+                <input type="number" value="500" min="0" max="1000" step="1"/>
+                </td>
+            </tr>
+            </f:for>
+        </table>
+    </div>
     <f:link.action action="list">Back to list</f:link.action>
     <br/>
 </f:section>

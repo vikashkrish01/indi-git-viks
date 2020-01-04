@@ -17,4 +17,21 @@ namespace Hulk\HofexpressApp\Domain\Repository;
  */
 class RestaurantRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
 {
+
+    /**
+     * @param string $search
+     * @return array|\TYPO3\CMS\Extbase\Persistence\QueryResultInterface\restaurants[]
+     * @throws \TYPO3\CMS\Extbase\Persistence\Exception\InvalidQueryException
+     */
+    public function findBySearch(string $search){
+        $query= $this->createQuery();
+
+         $constraints= [];
+         $constraints[]= $query->like('name', '%' . $search . '%');
+         $constraints[]=$query->like('restaurantType', '%' . $search . '%');
+        $query->matching(
+            $query->logicalOr($constraints)
+        );
+        return $query->execute();
+    }
 }

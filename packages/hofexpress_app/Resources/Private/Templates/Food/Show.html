@@ -13,11 +13,13 @@ in /Configuration/ExtensionBuilder/settings.yaml:
 Otherwise your changes will be overwritten the next time you save the extension in the extension builder
 
 <f:section name="content">
-    <h1>Single View for Food</h1>
-
-    <f:flashMessages />
+    <h1>Select the Quantity</h1>
     <f:render partial="Food/Properties" arguments="{food:food}" />
+    <f:form action="list" controller="Food">
+        <f:form.textfield name="quantity" class="form-control" placeholder="Give the quantity" style="width:20%"/>
+        <br>
+        <f:form.button>Add To Cart</f:form.button>
+    </f:form>
     <f:link.action action="list">Back to list</f:link.action><br />
-    <f:link.action action="new">New Food</f:link.action>
 </f:section>
 </html>

@@ -32,7 +32,8 @@
         "cweagans/composer-patches": "^1.6",
         "travis-lykes/hofexpress-package": "^1.0",
         "hulk/hofexpress": "dev-master",
-        "hulk/hofexpress-app": "dev-master"
+        "hulk/hofexpress-app": "dev-master",
+        "typo3/cms-felogin": "^9.5"
     },
     "repositories": {
         "local": {

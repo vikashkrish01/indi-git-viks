@@ -54,6 +54,7 @@ class ComposerStaticInit6fff64fcc21ce4541ecc03570f7a0d9d
             'TYPO3\\CMS\\Form\\' => 15,
             'TYPO3\\CMS\\Fluid\\' => 16,
             'TYPO3\\CMS\\Filelist\\' => 19,
+            'TYPO3\\CMS\\Felogin\\' => 18,
             'TYPO3\\CMS\\Extensionmanager\\' => 27,
             'TYPO3\\CMS\\Extbase\\' => 18,
             'TYPO3\\CMS\\Core\\' => 15,
@@ -231,6 +232,10 @@ class ComposerStaticInit6fff64fcc21ce4541ecc03570f7a0d9d
         'TYPO3\\CMS\\Filelist\\' => 
         array (
             0 => __DIR__ . '/../..' . '/public/typo3/sysext/filelist/Classes',
+        ),
+        'TYPO3\\CMS\\Felogin\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/public/typo3/sysext/felogin/Classes',
         ),
         'TYPO3\\CMS\\Extensionmanager\\' => 
         array (
