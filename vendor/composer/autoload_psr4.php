@@ -65,6 +65,7 @@ return array(
     'Psr\\Container\\' => array($vendorDir . '/psr/container/src'),
     'Psr\\Cache\\' => array($vendorDir . '/psr/cache/src'),
     'PhpParser\\' => array($vendorDir . '/nikic/php-parser/lib/PhpParser'),
+    'OliverHader\\SessionService\\' => array($baseDir . '/public/typo3conf/ext/session_service/Classes'),
     'Mso\\IdnaConvert\\' => array($vendorDir . '/algo26-matthias/idna-convert/src'),
     'Hulk\\Hofexpress\\' => array($baseDir . '/public/typo3conf/ext/hofexpress/Classes'),
     'Hulk\\HofexpressApp\\' => array($baseDir . '/public/typo3conf/ext/hofexpress_app/Classes'),

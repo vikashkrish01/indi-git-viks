@@ -1031,6 +1031,12 @@ call_user_func(
             'RestaurantListPlugin',
             'RestaurantListPlugin'
         );
+
+        \TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin(
+            'Hulk.HofexpressApp',
+            'OrderPlugin',
+            'OrderPlugin'
+        );
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile('hofexpress_app', 'Configuration/TypoScript', 'HofExpress');
 
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addLLrefForTCAdescr('tx_hofexpressapp_domain_model_customer', 'EXT:hofexpress_app/Resources/Private/Language/locallang_csh_tx_hofexpressapp_domain_model_customer.xlf');
@@ -1063,6 +1069,23 @@ call_user_func(
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addLLrefForTCAdescr('tx_hofexpressapp_domain_model_orderstatus', 'EXT:hofexpress_app/Resources/Private/Language/locallang_csh_tx_hofexpressapp_domain_model_orderstatus.xlf');
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::allowTableOnStandardPages('tx_hofexpressapp_domain_model_orderstatus');
 
+    }
+);
+
+/**
+ * Extension: session_service
+ * File: /var/www/html/public/typo3conf/ext/session_service/ext_tables.php
+ */
+
+$_EXTKEY = 'session_service';
+$_EXTCONF = $GLOBALS['TYPO3_CONF_VARS']['EXT']['extConf'][$_EXTKEY] ?? null;
+
+
+defined('TYPO3_MODE') || die('Access denied.');
+
+call_user_func(
+    function()
+    {
     }
 );
 

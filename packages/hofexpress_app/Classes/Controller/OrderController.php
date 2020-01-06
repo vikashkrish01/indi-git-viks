@@ -2,6 +2,16 @@
 namespace Hulk\HofexpressApp\Controller;
 
 
+
+use Hulk\HofexpressApp\Domain\Model\Customer;
+use Hulk\HofexpressApp\Domain\Model\Food;
+use Hulk\HofexpressApp\Domain\Model\Order;
+use Hulk\HofexpressApp\Domain\Model\OrderItems;
+use Hulk\HofexpressApp\Domain\Repository\OrderRepository;
+use OliverHader\SessionService\InvalidSessionException;
+use OliverHader\SessionService\SubjectCollection;
+use OliverHader\SessionService\SubjectResolver;
+
 /***
  *
  * This file is part of the "HofExpress" Extension for TYPO3 CMS.
@@ -21,7 +31,7 @@ class OrderController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
     /**
      * orderRepository
      * 
-     * @var \Hulk\HofexpressApp\Domain\Repository\OrderRepository
+     * @var OrderRepository
      */
     protected $orderRepository = null;
 
@@ -38,79 +48,86 @@ class OrderController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
 
     /**
      * action show
-     * 
-     * @param \Hulk\Hofexpress\Domain\Model\Order $order
      * @return void
      */
-    public function showAction(\Hulk\Hofexpress\Domain\Model\Order $order)
+    public function showAction()
     {
-        $this->view->assign('order', $order);
+      try{
+          $customer = SubjectResolver::get()
+              ->forClassName(Customer::class)
+              ->forPropertyName('userId')
+              ->resolve();
+         }catch(InvalidSessionException $exception){
+            $customer=null;
+         }
+         $order = $this->provideFoodList();
+        $this->view->assign('customer', $customer);
+        $this->view->assign('order',$order);
     }
 
-    /**
-     * action new
-     * 
-     * @return void
-     */
-    public function newAction()
-    {
-    }
+    private function provideFoodList(){
 
+        $collection = SubjectCollection::get('hofexpress_app/order');
+        if(!isset($collection['order'])){
+            $collection['order'] = $this->objectManager->get(Order::class);
+            $collection->persist();
+        }
+         return $collection['order'];
+    }
     /**
      * action create
-     * 
-     * @param \Hulk\Hofexpress\Domain\Model\Order $newOrder
      * @return void
+     * @param OrderItems $orderItems
+     * @throws \TYPO3\CMS\Extbase\Mvc\Exception\StopActionException
+     * @throws \TYPO3\CMS\Extbase\Mvc\Exception\UnsupportedRequestTypeException
+     * @throws \TYPO3\CMS\Extbase\Persistence\Exception\IllegalObjectTypeException
      */
-    public function createAction(\Hulk\Hofexpress\Domain\Model\Order $newOrder)
+    public function createAction(OrderItems $orderItems)
     {
-        $this->addFlashMessage('The object was created. Please be aware that this action is publicly accessible unless you implement an access check. See https://docs.typo3.org/typo3cms/extensions/extension_builder/User/Index.html', '', \TYPO3\CMS\Core\Messaging\AbstractMessage::WARNING);
-        $this->orderRepository->add($newOrder);
-        $this->redirect('list');
+
+        $order = $this->provideFoodList();
+        $order->addOrderItems($orderItems->getFood());
+        $order->orderRepository->update($order);
+        $this->redirect('show');
     }
 
     /**
      * action edit
-     * 
-     * @param \Hulk\Hofexpress\Domain\Model\Order $order
      * @ignorevalidation $order
      * @return void
      */
-    public function editAction(\Hulk\Hofexpress\Domain\Model\Order $order)
+    public function editAction()
     {
+        $order = $this->provideFoodList();
         $this->view->assign('order', $order);
     }
 
     /**
      * action update
-     * 
-     * @param \Hulk\Hofexpress\Domain\Model\Order $order
      * @return void
      */
-    public function updateAction(\Hulk\Hofexpress\Domain\Model\Order $order)
+    public function updateAction()
     {
-        $this->addFlashMessage('The object was updated. Please be aware that this action is publicly accessible unless you implement an access check. See https://docs.typo3.org/typo3cms/extensions/extension_builder/User/Index.html', '', \TYPO3\CMS\Core\Messaging\AbstractMessage::WARNING);
+        $order = $this->provideFoodList();
         $this->orderRepository->update($order);
-        $this->redirect('list');
+        $this->redirect('show');
     }
 
     /**
      * action delete
-     * 
-     * @param \Hulk\Hofexpress\Domain\Model\Order $order
      * @return void
      */
-    public function deleteAction(\Hulk\Hofexpress\Domain\Model\Order $order)
+    public function deleteAction()
     {
-        $this->addFlashMessage('The object was deleted. Please be aware that this action is publicly accessible unless you implement an access check. See https://docs.typo3.org/typo3cms/extensions/extension_builder/User/Index.html', '', \TYPO3\CMS\Core\Messaging\AbstractMessage::WARNING);
+        $order = $this->provideFoodList();
         $this->orderRepository->remove($order);
-        $this->redirect('list');
+        $this->redirect('show');
     }
 
     /**
-     * @param \Hulk\HofexpressApp\Domain\Repository\OrderRepository $orderRepository
+     * @param OrderRepository $orderRepository
      */
-    public function injectOrderRepository(\Hulk\HofexpressApp\Domain\Repository\OrderRepository $orderRepository)
+    public function injectOrderRepository(OrderRepository $orderRepository)
     {
         $this->orderRepository = $orderRepository;
     }

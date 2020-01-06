@@ -21,7 +21,7 @@ class Customer extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * userId
      * 
-     * @var int
+     * @var \TYPO3\CMS\Extbase\Domain\Model\FrontendUser
      * @TYPO3\CMS\Extbase\Annotation\Validate("NotEmpty")
      */
     protected $userId = 0;

@@ -16490,18 +16490,6 @@ return array (
         'html' => 
         array (
           'showitem' => '--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.general;general,header;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:header.ALT.html_formlabel,nav_title,bodytext;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:bodytext.ALT.html_formlabel,--div--;LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:tabs.background,background_color,background_image,background_image_options,--div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.visibility;visibility,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.access;access,--palette--;;hiddenLanguagePalette',
-          'columnsOverrides' => 
-          array (
-            'bodytext' => 
-            array (
-              'config' => 
-              array (
-                'renderType' => 't3editor',
-                'wrap' => 'off',
-                'format' => 'html',
-              ),
-            ),
-          ),
         ),
       ),
       'palettes' => 
@@ -19626,9 +19614,29 @@ return array (
           'label' => 'LLL:EXT:hofexpress_app/Resources/Private/Language/locallang_db.xlf:tx_hofexpressapp_domain_model_customer.user_id',
           'config' => 
           array (
-            'type' => 'input',
-            'size' => 4,
-            'eval' => 'int,required',
+            'type' => 'select',
+            'renderType' => 'selectMultipleSideBySide',
+            'foreign_table' => 'fe_users',
+            'default' => 0,
+            'size' => 10,
+            'autoSizeMax' => 30,
+            'maxitems' => 1,
+            'multiple' => 0,
+            'fieldControl' => 
+            array (
+              'editPopup' => 
+              array (
+                'disabled' => false,
+              ),
+              'addRecord' => 
+              array (
+                'disabled' => false,
+              ),
+              'listModule' => 
+              array (
+                'disabled' => true,
+              ),
+            ),
           ),
         ),
         'phone_number' => 

@@ -12,4 +12,10 @@ plugin.tx_hofexpressapp_hofexpress {
         # cat=plugin.tx_hofexpressapp_hofexpress//a; type=string; label=Default storage PID
         storagePid =
     }
+    settings{
+     pages{
+        # cat=plugin.tx_hofexpressapp_hofexpress/file; type=string; label=Page ID used for order
+        order =
+    }
+   }
 }

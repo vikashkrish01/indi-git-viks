@@ -107,6 +107,9 @@ return [
         'hofexpress_app' => [
             'packagePath' => 'typo3conf/ext/hofexpress_app/',
         ],
+        'session_service' => [
+            'packagePath' => 'typo3conf/ext/session_service/',
+        ],
     ],
     'version' => 5,
 ];

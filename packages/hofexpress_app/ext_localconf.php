@@ -54,6 +54,23 @@ call_user_func(
             ]
         );
 
+        \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
+            'Hulk.HofexpressApp',
+            'OrderPlugin',
+            [
+
+                'Order' => 'show, new, create, update, delete',
+                'OrderItems' => 'show, add, update, delete'
+
+            ],
+            // non-cacheable actions
+            [
+
+                'Order' => 'show, new, create, update, delete',
+                'OrderItems' => 'show, add, update, delete'
+            ]
+        );
+
 
         // wizards
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
@@ -77,6 +94,15 @@ call_user_func(
                             tt_content_defValues {
                                 CType = list
                                 list_type = hofexpressapp_restaurantList
+                            }
+                        }
+                         orderList {
+                            iconIdentifier = hofexpress_app-plugin-hofexpress
+                            title = Orders List
+                            description = Contents Orders
+                            tt_content_defValues {
+                                CType = list
+                                list_type = hofexpressapp_order
                             }
                         }
                     }

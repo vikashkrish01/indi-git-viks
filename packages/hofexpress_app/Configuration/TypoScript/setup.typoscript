@@ -22,6 +22,11 @@ plugin.tx_hofexpressapp_hofexpress {
     mvc {
         #callDefaultActionIfActionCantBeResolved = 1
     }
+    settings{
+       pages{
+         order= {$plugin.tx_hofexpressapp_hofexpress.settings.pages.order}
+       }
+    }
 }
 
 # these classes are only used in auto-generated templates
@@ -56,4 +61,5 @@ plugin.tx_hofexpressapp._CSS_DEFAULT_STYLE (
     .typo3-messages .message-ok {
         color:green;
     }
+
 )

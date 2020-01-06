@@ -95,6 +95,10 @@ class ComposerStaticInit6fff64fcc21ce4541ecc03570f7a0d9d
             'Psr\\Cache\\' => 10,
             'PhpParser\\' => 10,
         ),
+        'O' => 
+        array (
+            'OliverHader\\SessionService\\' => 27,
+        ),
         'M' => 
         array (
             'Mso\\IdnaConvert\\' => 16,
@@ -369,6 +373,10 @@ class ComposerStaticInit6fff64fcc21ce4541ecc03570f7a0d9d
         'PhpParser\\' => 
         array (
             0 => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser',
+        ),
+        'OliverHader\\SessionService\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/public/typo3conf/ext/session_service/Classes',
         ),
         'Mso\\IdnaConvert\\' => 
         array (
