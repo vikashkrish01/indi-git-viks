@@ -1,7 +1,6 @@
 <?php
 namespace Hulk\HofexpressApp\Controller;
 
-
 use Hulk\HofexpressApp\Domain\Model\RestaurantMenu;
 use Hulk\HofexpressApp\Domain\Model\Food;
 
@@ -36,9 +35,9 @@ class RestaurantController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContr
      */
     public function listAction(string $search = null)
     {
-        if($search === null){
+        if ($search === null) {
             $restaurants = $this->restaurantRepository->findAll();
-        }else{
+        } else {
             $restaurants = $this->restaurantRepository->findBySearch($search);
         }
         $this->view->assign('search', $search);

@@ -33,6 +33,13 @@ class OrderItems extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     protected $food = null;
 
     /**
+     * order
+     * 
+     * @var \Hulk\HofexpressApp\Domain\Model\Order
+     */
+    protected $order = null;
+
+    /**
      * Returns the quantity
      * 
      * @return int quantity
@@ -72,5 +79,26 @@ class OrderItems extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     public function setFood(\Hulk\HofexpressApp\Domain\Model\Food $food)
     {
         $this->food = $food;
+    }
+
+    /**
+     * Returns the order
+     * 
+     * @return \Hulk\HofexpressApp\Domain\Model\Order $order
+     */
+    public function getOrder()
+    {
+        return $this->order;
+    }
+
+    /**
+     * Sets the order
+     * 
+     * @param \Hulk\HofexpressApp\Domain\Model\Order $order
+     * @return void
+     */
+    public function setOrder(\Hulk\HofexpressApp\Domain\Model\Order $order)
+    {
+        $this->order = $order;
     }
 }

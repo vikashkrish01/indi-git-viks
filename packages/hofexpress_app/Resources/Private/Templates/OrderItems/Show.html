@@ -17,12 +17,6 @@ Otherwise your changes will be overwritten the next time you save the extension 
 
     <f:flashMessages />
     <f:render partial="OrderItems/Properties" arguments="{orderItems:orderItems}" />
-    <div>
-        <f:link.action action="add" arguments="{food:food}" class="btn btn-info" controller="OrderItems"
-                       pageUid="{settings.pages.order}" pluginName="OrderPlugin">
-            Add to Cart
-        </f:link.action>
-    </div>
     <f:link.action action="list">Back to list</f:link.action><br />
     <f:link.action action="new">New OrderItems</f:link.action>
 </f:section>

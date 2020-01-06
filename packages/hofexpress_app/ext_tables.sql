@@ -48,7 +48,8 @@ CREATE TABLE tx_hofexpressapp_domain_model_restaurant (
 	restaurant_type varchar(255) DEFAULT '' NOT NULL,
 	cover_image int(11) unsigned NOT NULL default '0',
 	menu int(11) unsigned DEFAULT '0',
-	food text NOT NULL
+	food text NOT NULL,
+	order_items text NOT NULL
 
 );
 
@@ -74,7 +75,8 @@ CREATE TABLE tx_hofexpressapp_domain_model_orderitems (
 	tx_order int(11) unsigned DEFAULT '0' NOT NULL,
 
 	quantity int(11) DEFAULT '0' NOT NULL,
-	food int(11) unsigned DEFAULT '0'
+	food int(11) unsigned DEFAULT '0',
+	tx_hofexpressapp_order int(11) unsigned DEFAULT '0'
 
 );
 

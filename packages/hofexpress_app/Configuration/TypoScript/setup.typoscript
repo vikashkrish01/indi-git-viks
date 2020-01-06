@@ -1,4 +1,3 @@
-
 plugin.tx_hofexpressapp_hofexpress {
     view {
         templateRootPaths.0 = EXT:hofexpress_app/Resources/Private/Templates/
@@ -24,7 +23,7 @@ plugin.tx_hofexpressapp_hofexpress {
     }
     settings{
        pages{
-         order= {$plugin.tx_hofexpressapp_hofexpress.settings.pages.order}
+         orderItems= {$plugin.tx_hofexpressapp_hofexpress.settings.pages.orderItems}
        }
     }
 }

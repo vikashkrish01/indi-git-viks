@@ -1,0 +1,14 @@
+
+config.tx_extbase {
+  persistence {
+    classes {
+
+      Hulk\HofexpressApp\Domain\Model\OrderItems {
+        mapping {
+          
+        }
+      }
+
+    }
+  }
+}

@@ -20,10 +20,10 @@ return [
         'iconfile' => 'EXT:hofexpress_app/Resources/Public/Icons/tx_hofexpressapp_domain_model_restaurant.gif'
     ],
     'interface' => [
-        'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, name, description, logo, address, restaurant_type, cover_image, menu, food',
+        'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, name, description, logo, address, restaurant_type, cover_image, menu, food, order_items',
     ],
     'types' => [
-        '1' => ['showitem' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, name, description, logo, address, restaurant_type, cover_image, menu, food, --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access, starttime, endtime'],
+        '1' => ['showitem' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, name, description, logo, address, restaurant_type, cover_image, menu, food, order_items, --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access, starttime, endtime'],
     ],
     'columns' => [
         'sys_language_uid' => [
@@ -287,6 +287,32 @@ return [
                 'type' => 'select',
                 'renderType' => 'selectMultipleSideBySide',
                 'foreign_table' => 'tx_hofexpressapp_domain_model_food',
+                'default' => 0,
+                'size' => 10,
+                'autoSizeMax' => 30,
+                'maxitems' => 9999,
+                'multiple' => 0,
+                'fieldControl' => [
+                    'editPopup' => [
+                        'disabled' => false,
+                    ],
+                    'addRecord' => [
+                        'disabled' => false,
+                    ],
+                    'listModule' => [
+                        'disabled' => true,
+                    ],
+                ],
+            ],
+
+        ],
+        'order_items' => [
+            'exclude' => true,
+            'label' => 'LLL:EXT:hofexpress_app/Resources/Private/Language/locallang_db.xlf:tx_hofexpressapp_domain_model_restaurant.order_items',
+            'config' => [
+                'type' => 'select',
+                'renderType' => 'selectMultipleSideBySide',
+                'foreign_table' => 'tx_hofexpressapp_domain_model_orderitems',
                 'default' => 0,
                 'size' => 10,
                 'autoSizeMax' => 30,

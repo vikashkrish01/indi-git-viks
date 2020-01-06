@@ -82,6 +82,13 @@ class Restaurant extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     protected $food = null;
 
     /**
+     * orderItems
+     * 
+     * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Hulk\HofexpressApp\Domain\Model\OrderItems>
+     */
+    protected $orderItems = null;
+
+    /**
      * __construct
      */
     public function __construct()
@@ -102,6 +109,7 @@ class Restaurant extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     protected function initStorageObjects()
     {
         $this->food = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
+        $this->orderItems = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
     }
 
     /**
@@ -292,5 +300,48 @@ class Restaurant extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     public function setFood(\TYPO3\CMS\Extbase\Persistence\ObjectStorage $food)
     {
         $this->food = $food;
+    }
+
+    /**
+     * Adds a OrderItems
+     * 
+     * @param \Hulk\HofexpressApp\Domain\Model\OrderItems $orderItem
+     * @return void
+     */
+    public function addOrderItem(\Hulk\HofexpressApp\Domain\Model\OrderItems $orderItem)
+    {
+        $this->orderItems->attach($orderItem);
+    }
+
+    /**
+     * Removes a OrderItems
+     * 
+     * @param \Hulk\HofexpressApp\Domain\Model\OrderItems $orderItemToRemove The OrderItems to be removed
+     * @return void
+     */
+    public function removeOrderItem(\Hulk\HofexpressApp\Domain\Model\OrderItems $orderItemToRemove)
+    {
+        $this->orderItems->detach($orderItemToRemove);
+    }
+
+    /**
+     * Returns the orderItems
+     * 
+     * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Hulk\HofexpressApp\Domain\Model\OrderItems> $orderItems
+     */
+    public function getOrderItems()
+    {
+        return $this->orderItems;
+    }
+
+    /**
+     * Sets the orderItems
+     * 
+     * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Hulk\HofexpressApp\Domain\Model\OrderItems> $orderItems
+     * @return void
+     */
+    public function setOrderItems(\TYPO3\CMS\Extbase\Persistence\ObjectStorage $orderItems)
+    {
+        $this->orderItems = $orderItems;
     }
 }

@@ -5,10 +5,10 @@ This Template is responsible for displaying a single view for a domain object
 
 If you modify this template, do not forget to change the overwrite settings
 in /Configuration/ExtensionBuilder/settings.yaml:
-  Resources:
-    Private:
-      Templates:
-        Show.html: keep
+Resources:
+Private:
+Templates:
+Show.html: keep
 
 Otherwise your changes will be overwritten the next time you save the extension in the extension builder
 
@@ -16,8 +16,8 @@ Otherwise your changes will be overwritten the next time you save the extension 
     <h1>Select the Quantity</h1>
     <f:render partial="Food/Properties" arguments="{food:food}" />
     <div>
-        <f:link.action action="add" arguments="{food:food}" class="btn btn-info" controller="OrderItems"
-                       pageUid="{settings.pages.order}" pluginName="OrderPlugin">
+        <f:link.action action="show" arguments="{food:food}" class="btn btn-info" controller="OrderItems"
+                       pageUid="{settings.pages.orderItems}" pluginName="OrderPlugin">
             Add to Cart
         </f:link.action>
     </div>

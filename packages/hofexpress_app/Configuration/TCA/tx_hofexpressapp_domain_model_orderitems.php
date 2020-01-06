@@ -20,10 +20,10 @@ return [
         'iconfile' => 'EXT:hofexpress_app/Resources/Public/Icons/tx_hofexpressapp_domain_model_orderitems.gif'
     ],
     'interface' => [
-        'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, quantity, food',
+        'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, quantity, food, tx_hofexpressapp_order',
     ],
     'types' => [
-        '1' => ['showitem' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, quantity, food, --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access, starttime, endtime'],
+        '1' => ['showitem' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, quantity, food, tx_hofexpressapp_order, --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access, starttime, endtime'],
     ],
     'columns' => [
         'sys_language_uid' => [
@@ -132,6 +132,19 @@ return [
                 'type' => 'select',
                 'renderType' => 'selectSingle',
                 'foreign_table' => 'tx_hofexpressapp_domain_model_food',
+                'default' => 0,
+                'minitems' => 0,
+                'maxitems' => 1,
+            ],
+
+        ],
+        'tx_hofexpressapp_order' => [
+            'exclude' => true,
+            'label' => 'LLL:EXT:hofexpress_app/Resources/Private/Language/locallang_db.xlf:tx_hofexpressapp_domain_model_orderitems.tx_hofexpressapp_order',
+            'config' => [
+                'type' => 'select',
+                'renderType' => 'selectSingle',
+                'foreign_table' => 'tx_hofexpressapp_domain_model_order',
                 'default' => 0,
                 'minitems' => 0,
                 'maxitems' => 1,

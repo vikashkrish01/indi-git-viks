@@ -5,25 +5,25 @@ This Template is responsible for creating a table of domain objects.
 
 If you modify this template, do not forget to change the overwrite settings
 in /Configuration/ExtensionBuilder/settings.yaml:
-  Resources:
-    Private:
-      Templates:
-        List.html: keep
+Resources:
+Private:
+Templates:
+List.html: keep
 
 Otherwise your changes will be overwritten the next time you save the extension in the extension builder
 
 <f:section name="content">
 
-      <div class="row">
-          <div class="col-6">
-              <h2>Lists Of Restaurants</h2>
-          </div>
-          <div class="col-6">
-              <f:form action="list" controller="Restaurant">
-                  <f:form.textfield name="search" class="form-control" placeholder="search"/>
-              </f:form>
-          </div>
-      </div>
+    <div class="row">
+        <div class="col-6">
+            <h2>Lists Of Restaurants</h2>
+        </div>
+        <div class="col-6">
+            <f:form action="list" controller="Restaurant">
+                <f:form.textfield name="search" class="form-control" placeholder="search"/>
+            </f:form>
+        </div>
+    </div>
 
     <f:if condition="{search}">
         <div class="alert alert-info">
@@ -32,51 +32,51 @@ Otherwise your changes will be overwritten the next time you save the extension 
     </f:if>
 
     <f:for each="{restaurants}" as="restaurant">
-      <div class="row">
-          <div class="col-3">
-              <f:if condition="{restaurant.logo}">
-                  <f:then>
-                      <f:image src="{restaurant.logo.originalResource.publicUrl}" maxWidth="200" maxHeight="200"/>
-                  </f:then>
-                  <f:else>
-                      No photo given...
-                  </f:else>
-              </f:if>
-          </div>
-          <div class="col-6">
-              <strong>
-                  <f:translate key="tx_hofexpressapp_domain_model_restaurant.name"/>
+        <div class="row">
+            <div class="col-3">
+                <f:if condition="{restaurant.logo}">
+                    <f:then>
+                        <f:image src="{restaurant.logo.originalResource.publicUrl}" maxWidth="200" maxHeight="200"/>
+                    </f:then>
+                    <f:else>
+                        No photo given...
+                    </f:else>
+                </f:if>
+            </div>
+            <div class="col-6">
+                <strong>
+                    <f:translate key="tx_hofexpressapp_domain_model_restaurant.name"/>
 
-                  :
-                  <f:link.action action="show" arguments="{restaurant : restaurant}">{restaurant.name}</f:link.action>
-              </strong>
-          </div>
-          <div class="col-3">
-              <strong>
-                  <f:translate key="tx_hofexpressapp_domain_model_restaurant.restaurant_type"/>
+                    :
+                    <f:link.action action="show" arguments="{restaurant : restaurant}">{restaurant.name}</f:link.action>
+                </strong>
+            </div>
+            <div class="col-3">
+                <strong>
+                    <f:translate key="tx_hofexpressapp_domain_model_restaurant.restaurant_type"/>
 
-                  :    {restaurant.restaurantType}
-              </strong>
-          </div>
-      </div>
+                    :    {restaurant.restaurantType}
+                </strong>
+            </div>
+        </div>
         <hr>
     </f:for>
     <f:comment>
-    <table  class="tx_hofexpressapp" >
-        <tr>
-            <th><f:translate key="tx_hofexpressapp_domain_model_restaurant.name" /></th>
-            <th><f:translate key="tx_hofexpressapp_domain_model_restaurant.restaurant_type" /></th>
-            <th> </th>
-            <th> </th>
-        </tr>
-
-        <f:for each="{restaurants}" as="restaurant">
+        <table  class="tx_hofexpressapp" >
             <tr>
-                <td></td>
-                <td></td>
+                <th><f:translate key="tx_hofexpressapp_domain_model_restaurant.name" /></th>
+                <th><f:translate key="tx_hofexpressapp_domain_model_restaurant.restaurant_type" /></th>
+                <th> </th>
+                <th> </th>
             </tr>
-        </f:for>
-    </table>
+
+            <f:for each="{restaurants}" as="restaurant">
+                <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </f:for>
+        </table>
     </f:comment>
 </f:section>
 </html>

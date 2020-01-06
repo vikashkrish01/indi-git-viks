@@ -279,8 +279,8 @@
         {
             "config": {
                 "position": [
-                    69,
-                    388
+                    340,
+                    310
                 ]
             },
             "name": "New Model Object",
@@ -400,6 +400,17 @@
                             "relationWire": "[wired]",
                             "renderType": "selectMultipleSideBySide",
                             "uid": "526595816445"
+                        },
+                        {
+                            "foreignRelationClass": "",
+                            "lazyLoading": false,
+                            "propertyIsExcludeField": true,
+                            "relationDescription": "",
+                            "relationName": "orderItems",
+                            "relationType": "zeroToMany",
+                            "relationWire": "[wired]",
+                            "renderType": "selectMultipleSideBySide",
+                            "uid": "829845504028"
                         }
                     ]
                 }
@@ -570,6 +581,17 @@
                             "relationWire": "[wired]",
                             "renderType": "selectSingle",
                             "uid": "407531598093"
+                        },
+                        {
+                            "foreignRelationClass": "",
+                            "lazyLoading": false,
+                            "propertyIsExcludeField": true,
+                            "relationDescription": "",
+                            "relationName": "order",
+                            "relationType": "zeroToOne",
+                            "relationWire": "[wired]",
+                            "renderType": "selectSingle",
+                            "uid": "363805927772"
                         }
                     ]
                 }
@@ -680,8 +702,8 @@
         {
             "config": {
                 "position": [
-                    347,
-                    276
+                    5,
+                    407
                 ]
             },
             "name": "New Model Object",
@@ -963,11 +985,35 @@
                 "terminal": "SOURCES",
                 "uid": "1211410662783"
             }
+        },
+        {
+            "src": {
+                "moduleId": 3,
+                "terminal": "relationWire_2",
+                "uid": "829845504028"
+            },
+            "tgt": {
+                "moduleId": 5,
+                "terminal": "SOURCES",
+                "uid": "716392749896"
+            }
+        },
+        {
+            "src": {
+                "moduleId": 5,
+                "terminal": "relationWire_1",
+                "uid": "363805927772"
+            },
+            "tgt": {
+                "moduleId": 4,
+                "terminal": "SOURCES",
+                "uid": "1539186746564"
+            }
         }
     ],
     "storagePath": "\/var\/www\/html\/packages\/",
     "log": {
-        "last_modified": "2019-12-20 06:02",
+        "last_modified": "2020-01-06 02:01",
         "extension_builder_version": "9.10.2",
         "be_user": " (1)"
     }

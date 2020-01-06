@@ -264,4 +264,67 @@ class RestaurantTest extends \TYPO3\TestingFramework\Core\Unit\UnitTestCase
 
         $this->subject->removeFood($food);
     }
+
+    /**
+     * @test
+     */
+    public function getOrderItemsReturnsInitialValueForOrderItems()
+    {
+        $newObjectStorage = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
+        self::assertEquals(
+            $newObjectStorage,
+            $this->subject->getOrderItems()
+        );
+    }
+
+    /**
+     * @test
+     */
+    public function setOrderItemsForObjectStorageContainingOrderItemsSetsOrderItems()
+    {
+        $orderItem = new \Hulk\HofexpressApp\Domain\Model\OrderItems();
+        $objectStorageHoldingExactlyOneOrderItems = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
+        $objectStorageHoldingExactlyOneOrderItems->attach($orderItem);
+        $this->subject->setOrderItems($objectStorageHoldingExactlyOneOrderItems);
+
+        self::assertAttributeEquals(
+            $objectStorageHoldingExactlyOneOrderItems,
+            'orderItems',
+            $this->subject
+        );
+    }
+
+    /**
+     * @test
+     */
+    public function addOrderItemToObjectStorageHoldingOrderItems()
+    {
+        $orderItem = new \Hulk\HofexpressApp\Domain\Model\OrderItems();
+        $orderItemsObjectStorageMock = $this->getMockBuilder(\TYPO3\CMS\Extbase\Persistence\ObjectStorage::class)
+            ->setMethods(['attach'])
+            ->disableOriginalConstructor()
+            ->getMock();
+
+        $orderItemsObjectStorageMock->expects(self::once())->method('attach')->with(self::equalTo($orderItem));
+        $this->inject($this->subject, 'orderItems', $orderItemsObjectStorageMock);
+
+        $this->subject->addOrderItem($orderItem);
+    }
+
+    /**
+     * @test
+     */
+    public function removeOrderItemFromObjectStorageHoldingOrderItems()
+    {
+        $orderItem = new \Hulk\HofexpressApp\Domain\Model\OrderItems();
+        $orderItemsObjectStorageMock = $this->getMockBuilder(\TYPO3\CMS\Extbase\Persistence\ObjectStorage::class)
+            ->setMethods(['detach'])
+            ->disableOriginalConstructor()
+            ->getMock();
+
+        $orderItemsObjectStorageMock->expects(self::once())->method('detach')->with(self::equalTo($orderItem));
+        $this->inject($this->subject, 'orderItems', $orderItemsObjectStorageMock);
+
+        $this->subject->removeOrderItem($orderItem);
+    }
 }

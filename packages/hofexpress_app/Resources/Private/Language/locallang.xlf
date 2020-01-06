@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="en" datatype="plaintext" original="EXT:hofexpress_app/Resources/Private/Language/locallang" date="2019-12-20T18:02:44Z" product-name="hofexpress_app">
+	<file source-language="en" datatype="plaintext" original="EXT:hofexpress_app/Resources/Private/Language/locallang" date="2020-01-06T14:01:06Z" product-name="hofexpress_app">
 		<header/>
 		<body>
 			<trans-unit id="tx_hofexpressapp_domain_model_customer" resname="tx_hofexpressapp_domain_model_customer">
@@ -81,6 +81,9 @@
 			<trans-unit id="tx_hofexpressapp_domain_model_restaurant.food" resname="tx_hofexpressapp_domain_model_restaurant.food">
 				<source>Food</source>
 			</trans-unit>
+			<trans-unit id="tx_hofexpressapp_domain_model_restaurant.order_items" resname="tx_hofexpressapp_domain_model_restaurant.order_items">
+				<source>Order Items</source>
+			</trans-unit>
 			<trans-unit id="tx_hofexpressapp_domain_model_order" resname="tx_hofexpressapp_domain_model_order">
 				<source>Order</source>
 			</trans-unit>
@@ -110,6 +113,9 @@
 			</trans-unit>
 			<trans-unit id="tx_hofexpressapp_domain_model_orderitems.food" resname="tx_hofexpressapp_domain_model_orderitems.food">
 				<source>Food</source>
+			</trans-unit>
+			<trans-unit id="tx_hofexpressapp_domain_model_orderitems.tx_hofexpressapp_order" resname="tx_hofexpressapp_domain_model_orderitems.tx_hofexpressapp_order">
+				<source>Order</source>
 			</trans-unit>
 			<trans-unit id="tx_hofexpressapp_domain_model_deliverytype" resname="tx_hofexpressapp_domain_model_deliverytype">
 				<source>Delivery Type</source>

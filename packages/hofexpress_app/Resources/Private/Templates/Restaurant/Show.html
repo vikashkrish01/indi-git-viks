@@ -1,5 +1,5 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
-<f:layout name="Default"/>
+<f:layout name="Default" />
 
 This Template is responsible for displaying a single view for a domain object
 
@@ -91,9 +91,9 @@ Otherwise your changes will be overwritten the next time you save the extension 
                     </f:link.action>
                 </td>
                 <td>
-                        <f:link.action action="create" arguments="{food:food}" class="btn btn-info"
-                                       controller="Order"
-                                       pageUid="{settings.pages.order}" pluginName="OrderPlugin">
+                        <f:link.action action="show"  class="btn btn-info" arguments="{orderItems:orderItems}"
+                                       git ="OrderItems"
+                                       pageUid="{settings.pages.orderItems}" pluginName="OrderPlugin">
                             Add to Cart
                         </f:link.action>
                 </td>

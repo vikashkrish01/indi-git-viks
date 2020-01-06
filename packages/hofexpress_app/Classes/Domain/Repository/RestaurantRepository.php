@@ -20,18 +20,16 @@ class RestaurantRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
 
     /**
      * @param string $search
-     * @return array|\TYPO3\CMS\Extbase\Persistence\QueryResultInterface\restaurants[]
      * @throws \TYPO3\CMS\Extbase\Persistence\Exception\InvalidQueryException
+     * @return array|\TYPO3\CMS\Extbase\Persistence\QueryResultInterface\restaurants[]
      */
-    public function findBySearch(string $search){
-        $query= $this->createQuery();
-
-         $constraints= [];
-         $constraints[]= $query->like('name', '%' . $search . '%');
-         $constraints[]=$query->like('restaurantType', '%' . $search . '%');
-        $query->matching(
-            $query->logicalOr($constraints)
-        );
+    public function findBySearch(string $search)
+    {
+        $query = $this->createQuery();
+        $constraints = [];
+        $constraints[] = $query->like('name', '%' . $search . '%');
+        $constraints[] = $query->like('restaurantType', '%' . $search . '%');
+        $query->matching($query->logicalOr($constraints));
         return $query->execute();
     }
 }

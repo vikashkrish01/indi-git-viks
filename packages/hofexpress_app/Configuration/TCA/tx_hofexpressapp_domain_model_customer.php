@@ -116,31 +116,13 @@ return [
             ],
         ],
 
-
         'user_id' => [
             'exclude' => true,
             'label' => 'LLL:EXT:hofexpress_app/Resources/Private/Language/locallang_db.xlf:tx_hofexpressapp_domain_model_customer.user_id',
             'config' => [
-                'type' => 'select',
-                'renderType'=>'selectMultipleSideBySide',
-                'foreign_table'=>'fe_users',
-                'default' => 0,
-                'size' => 10,
-                'autoSizeMax' => 30,
-                'maxitems' => 1,
-                'multiple' => 0,
-                'fieldControl' => [
-                    'editPopup' => [
-                        'disabled' => false,
-                    ],
-                    'addRecord' => [
-                        'disabled' => false,
-                    ],
-                    'listModule' => [
-                        'disabled' => true,
-                    ],
-                ],
-
+                'type' => 'input',
+                'size' => 4,
+                'eval' => 'int,required'
             ]
         ],
         'phone_number' => [

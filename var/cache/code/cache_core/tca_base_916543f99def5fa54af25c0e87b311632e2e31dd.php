@@ -19614,29 +19614,9 @@ return array (
           'label' => 'LLL:EXT:hofexpress_app/Resources/Private/Language/locallang_db.xlf:tx_hofexpressapp_domain_model_customer.user_id',
           'config' => 
           array (
-            'type' => 'select',
-            'renderType' => 'selectMultipleSideBySide',
-            'foreign_table' => 'fe_users',
-            'default' => 0,
-            'size' => 10,
-            'autoSizeMax' => 30,
-            'maxitems' => 1,
-            'multiple' => 0,
-            'fieldControl' => 
-            array (
-              'editPopup' => 
-              array (
-                'disabled' => false,
-              ),
-              'addRecord' => 
-              array (
-                'disabled' => false,
-              ),
-              'listModule' => 
-              array (
-                'disabled' => true,
-              ),
-            ),
+            'type' => 'input',
+            'size' => 4,
+            'eval' => 'int,required',
           ),
         ),
         'phone_number' => 
@@ -20631,13 +20611,13 @@ return array (
       ),
       'interface' => 
       array (
-        'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, quantity, food',
+        'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, quantity, food, tx_hofexpressapp_order',
       ),
       'types' => 
       array (
         1 => 
         array (
-          'showitem' => 'sys_language_uid,l10n_parent,l10n_diffsource,hidden,quantity,food,--div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access,starttime,endtime',
+          'showitem' => 'sys_language_uid,l10n_parent,l10n_diffsource,hidden,quantity,food,tx_hofexpressapp_order,--div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access,starttime,endtime',
         ),
       ),
       'columns' => 
@@ -20777,6 +20757,20 @@ return array (
             'type' => 'select',
             'renderType' => 'selectSingle',
             'foreign_table' => 'tx_hofexpressapp_domain_model_food',
+            'default' => 0,
+            'minitems' => 0,
+            'maxitems' => 1,
+          ),
+        ),
+        'tx_hofexpressapp_order' => 
+        array (
+          'exclude' => true,
+          'label' => 'LLL:EXT:hofexpress_app/Resources/Private/Language/locallang_db.xlf:tx_hofexpressapp_domain_model_orderitems.tx_hofexpressapp_order',
+          'config' => 
+          array (
+            'type' => 'select',
+            'renderType' => 'selectSingle',
+            'foreign_table' => 'tx_hofexpressapp_domain_model_order',
             'default' => 0,
             'minitems' => 0,
             'maxitems' => 1,
@@ -20992,13 +20986,13 @@ return array (
       ),
       'interface' => 
       array (
-        'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, name, description, logo, address, restaurant_type, cover_image, menu, food',
+        'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, name, description, logo, address, restaurant_type, cover_image, menu, food, order_items',
       ),
       'types' => 
       array (
         1 => 
         array (
-          'showitem' => 'sys_language_uid,l10n_parent,l10n_diffsource,hidden,name,description,logo,address,restaurant_type,cover_image,menu,food,--div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access,starttime,endtime',
+          'showitem' => 'sys_language_uid,l10n_parent,l10n_diffsource,hidden,name,description,logo,address,restaurant_type,cover_image,menu,food,order_items,--div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access,starttime,endtime',
         ),
       ),
       'columns' => 
@@ -21417,6 +21411,37 @@ return array (
             'type' => 'select',
             'renderType' => 'selectMultipleSideBySide',
             'foreign_table' => 'tx_hofexpressapp_domain_model_food',
+            'default' => 0,
+            'size' => 10,
+            'autoSizeMax' => 30,
+            'maxitems' => 9999,
+            'multiple' => 0,
+            'fieldControl' => 
+            array (
+              'editPopup' => 
+              array (
+                'disabled' => false,
+              ),
+              'addRecord' => 
+              array (
+                'disabled' => false,
+              ),
+              'listModule' => 
+              array (
+                'disabled' => true,
+              ),
+            ),
+          ),
+        ),
+        'order_items' => 
+        array (
+          'exclude' => true,
+          'label' => 'LLL:EXT:hofexpress_app/Resources/Private/Language/locallang_db.xlf:tx_hofexpressapp_domain_model_restaurant.order_items',
+          'config' => 
+          array (
+            'type' => 'select',
+            'renderType' => 'selectMultipleSideBySide',
+            'foreign_table' => 'tx_hofexpressapp_domain_model_orderitems',
             'default' => 0,
             'size' => 10,
             'autoSizeMax' => 30,

@@ -74,4 +74,30 @@ class OrderItemsTest extends \TYPO3\TestingFramework\Core\Unit\UnitTestCase
             $this->subject
         );
     }
+
+    /**
+     * @test
+     */
+    public function getOrderReturnsInitialValueForOrder()
+    {
+        self::assertEquals(
+            null,
+            $this->subject->getOrder()
+        );
+    }
+
+    /**
+     * @test
+     */
+    public function setOrderForOrderSetsOrder()
+    {
+        $orderFixture = new \Hulk\HofexpressApp\Domain\Model\Order();
+        $this->subject->setOrder($orderFixture);
+
+        self::assertAttributeEquals(
+            $orderFixture,
+            'order',
+            $this->subject
+        );
+    }
 }
