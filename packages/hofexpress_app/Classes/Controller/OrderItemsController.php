@@ -8,6 +8,7 @@ use OliverHader\SessionService\InvalidSessionException;
 use OliverHader\SessionService\SubjectCollection;
 use OliverHader\SessionService\SubjectResolver;
 
+
 /***
  *
  * This file is part of the "HofExpress" Extension for TYPO3 CMS.
@@ -64,26 +65,32 @@ class OrderItemsController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContr
      * @param Food $food
      * @param int $quantity
      * @return void
+     * @throws \TYPO3\CMS\Extbase\Mvc\Exception\StopActionException
+     * @throws \TYPO3\CMS\Extbase\Mvc\Exception\UnsupportedRequestTypeException
      */
-    public function addAction(Food $food, int $quantity=1)
+    public function addAction(Food $food, int $quantity=null)
     {
         try {
             $customer = SubjectResolver::get()->forClassName(Customer::class)->forPropertyName('userId')->resolve();
         } catch (InvalidSessionException $exception) {
             $customer = null;
         }
-
+        echo "<pre>";
+        print_r($food);
+        echo "</pre>";
+       
         // search for existing OrderItems in session, objects (search by Food
         // either null or one existing OrderItem
-        $orderItem = new OrderItems();
-        $orderItem->setFood($food);
-        $orderItem->setQuantity($quantity);
-        $this->redirect('show', null, null, null, 12);
+        $orderItems = new OrderItems();
+        $orderItems->setFood($food);
+        $orderItems->setQuantity($quantity);
+        $this->view->assign('customer', $customer);
+        $this->view->assign('orderItems', $orderItems);
+        $this->redirect('show');
 
 
 //        $orderItems = $this->provideFoodList();
-//        $this->view->assign('customer', $customer);
-//        $this->view->assign('orderItems', $orderItems);
+
     }
 
 
