@@ -75,10 +75,7 @@ class OrderItemsController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContr
         } catch (InvalidSessionException $exception) {
             $customer = null;
         }
-        echo "<pre>";
-        print_r($food);
-        echo "</pre>";
-       
+
         // search for existing OrderItems in session, objects (search by Food
         // either null or one existing OrderItem
         $orderItems = new OrderItems();
@@ -86,7 +83,7 @@ class OrderItemsController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContr
         $orderItems->setQuantity($quantity);
         $this->view->assign('customer', $customer);
         $this->view->assign('orderItems', $orderItems);
-        $this->redirect('show');
+//        $this->redirect('show');
 
 
 //        $orderItems = $this->provideFoodList();

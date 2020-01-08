@@ -86,9 +86,9 @@ Otherwise your changes will be overwritten the next time you save the extension 
                     </f:link.action>
                 </td>
                 <td>
-                    <f:link.action action="show" controller="Food" arguments="{food :food}">
+
                         {food.price -> f:format.currency(currencySign: '€')}
-                    </f:link.action>
+
                 </td>
                 <td>
                         <f:link.action action="add" class="btn btn-info" arguments="{food:food, quantity: 1}"
