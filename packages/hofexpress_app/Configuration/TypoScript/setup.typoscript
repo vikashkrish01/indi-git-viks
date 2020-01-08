@@ -1,4 +1,4 @@
-plugin.tx_hofexpressapp_hofexpress {
+plugin.tx_hofexpressapp {
     view {
         templateRootPaths.0 = EXT:hofexpress_app/Resources/Private/Templates/
         templateRootPaths.1 = {$plugin.tx_hofexpressapp_hofexpress.view.templateRootPath}

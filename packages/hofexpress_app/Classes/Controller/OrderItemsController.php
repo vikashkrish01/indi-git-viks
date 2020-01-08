@@ -2,6 +2,7 @@
 namespace Hulk\HofexpressApp\Controller;
 
 use Hulk\HofexpressApp\Domain\Model\Customer;
+use Hulk\HofexpressApp\Domain\Model\OrderItems;
 use OliverHader\SessionService\InvalidSessionException;
 use OliverHader\SessionService\SubjectCollection;
 use OliverHader\SessionService\SubjectResolver;
@@ -24,14 +25,14 @@ class OrderItemsController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContr
 
     /**
      * orderItemsRepository
-     * 
+     *
      * @var \Hulk\HofexpressApp\Domain\Repository\OrderItemsRepository
      */
     protected $orderItemsRepository = null;
 
     /**
      * action list
-     * 
+     *
      * @return void
      */
     public function listAction()
@@ -70,7 +71,7 @@ class OrderItemsController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContr
     }
     /**
      * action new
-     * 
+     *
      * @return void
      */
     public function newAction()
@@ -79,11 +80,11 @@ class OrderItemsController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContr
 
     /**
      * action create
-     * 
+     *
      * @param \Hulk\Hofexpress\Domain\Model\OrderItems $newOrderItems
      * @return void
      */
-    public function createAction(\Hulk\Hofexpress\Domain\Model\OrderItems $newOrderItems)
+    public function createAction(\Hulk\HofexpressApp\Domain\Model\OrderItems $newOrderItems)
     {
         $this->orderItemsRepository->add($newOrderItems);
         $this->redirect('show');
@@ -91,23 +92,23 @@ class OrderItemsController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContr
 
     /**
      * action edit
-     * 
+     *
      * @param \Hulk\HofexpressApp\Domain\Model\OrderItems $orderItems
      * @ignorevalidation $orderItems
      * @return void
      */
-    public function editAction(\Hulk\Hofexpress\Domain\Model\OrderItems $orderItems)
+    public function editAction(\Hulk\HofexpressApp\Domain\Model\OrderItems $orderItems)
     {
         $this->view->assign('orderItems', $orderItems);
     }
 
     /**
      * action update
-     * 
+     *
      * @param \Hulk\HofexpressApp\Domain\Model\OrderItems $orderItems
      * @return void
      */
-    public function updateAction(\Hulk\Hofexpress\Domain\Model\OrderItems $orderItems)
+    public function updateAction(\Hulk\HofexpressApp\Domain\Model\OrderItems $orderItems)
     {
         $this->addFlashMessage('The object was updated. Please be aware that this action is publicly accessible unless you implement an access check. See https://docs.typo3.org/typo3cms/extensions/extension_builder/User/Index.html', '', \TYPO3\CMS\Core\Messaging\AbstractMessage::WARNING);
         $this->orderItemsRepository->update($orderItems);
@@ -116,11 +117,11 @@ class OrderItemsController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContr
 
     /**
      * action delete
-     * 
+     *
      * @param \Hulk\HofexpressApp\Domain\Model\OrderItems $orderItems
      * @return void
      */
-    public function deleteAction(\Hulk\Hofexpress\Domain\Model\OrderItems $orderItems)
+    public function deleteAction(\Hulk\HofexpressApp\Domain\Model\OrderItems $orderItems)
     {
         $this->addFlashMessage('The object was deleted. Please be aware that this action is publicly accessible unless you implement an access check. See https://docs.typo3.org/typo3cms/extensions/extension_builder/User/Index.html', '', \TYPO3\CMS\Core\Messaging\AbstractMessage::WARNING);
         $this->orderItemsRepository->remove($orderItems);
