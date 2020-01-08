@@ -60,6 +60,11 @@ class OrderItems extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
         $this->quantity = $quantity;
     }
 
+    public function incrementQuantity()
+    {
+        $this->quantity++;
+    }
+
     /**
      * Returns the food
      * 

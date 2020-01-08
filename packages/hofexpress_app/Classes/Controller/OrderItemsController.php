@@ -2,6 +2,7 @@
 namespace Hulk\HofexpressApp\Controller;
 
 use Hulk\HofexpressApp\Domain\Model\Customer;
+use Hulk\HofexpressApp\Domain\Model\Food;
 use Hulk\HofexpressApp\Domain\Model\OrderItems;
 use OliverHader\SessionService\InvalidSessionException;
 use OliverHader\SessionService\SubjectCollection;
@@ -58,6 +59,33 @@ class OrderItemsController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContr
         $this->view->assign('orderItems', $orderItems);
     }
 
+    /**
+     * action show
+     * @param Food $food
+     * @param int $quantity
+     * @return void
+     */
+    public function addAction(Food $food, int $quantity=1)
+    {
+        try {
+            $customer = SubjectResolver::get()->forClassName(Customer::class)->forPropertyName('userId')->resolve();
+        } catch (InvalidSessionException $exception) {
+            $customer = null;
+        }
+
+        // search for existing OrderItems in session, objects (search by Food
+        // either null or one existing OrderItem
+        $orderItem = new OrderItems();
+        $orderItem->setFood($food);
+        $orderItem->setQuantity($quantity);
+        $this->redirect('show', null, null, null, 12);
+
+
+//        $orderItems = $this->provideFoodList();
+//        $this->view->assign('customer', $customer);
+//        $this->view->assign('orderItems', $orderItems);
+    }
+
 
 
     private function provideFoodList()
@@ -81,7 +109,7 @@ class OrderItemsController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContr
     /**
      * action create
      *
-     * @param \Hulk\Hofexpress\Domain\Model\OrderItems $newOrderItems
+     * @param \Hulk\HofexpressApp\Domain\Model\OrderItems $orderItems
      * @return void
      */
     public function createAction(\Hulk\HofexpressApp\Domain\Model\OrderItems $newOrderItems)

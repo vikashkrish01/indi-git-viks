@@ -16490,6 +16490,18 @@ return array (
         'html' => 
         array (
           'showitem' => '--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.general;general,header;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:header.ALT.html_formlabel,nav_title,bodytext;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:bodytext.ALT.html_formlabel,--div--;LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:tabs.background,background_color,background_image,background_image_options,--div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.visibility;visibility,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.access;access,--palette--;;hiddenLanguagePalette',
+          'columnsOverrides' => 
+          array (
+            'bodytext' => 
+            array (
+              'config' => 
+              array (
+                'renderType' => 't3editor',
+                'wrap' => 'off',
+                'format' => 'html',
+              ),
+            ),
+          ),
         ),
       ),
       'palettes' => 
