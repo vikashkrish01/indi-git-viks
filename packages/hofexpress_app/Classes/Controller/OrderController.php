@@ -46,17 +46,20 @@ class OrderController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
 
     /**
      * action show
-     * 
+     * @param OrderItems $orderItems
      * @return void
      */
-    public function showAction()
+    public function showAction(OrderItems $orderItems)
     {
         try {
             $customer = SubjectResolver::get()->forClassName(Customer::class)->forPropertyName('userId')->resolve();
         } catch (InvalidSessionException $exception) {
             $customer = null;
         }
-        $order = $this->provideFoodList();
+        print_r($orderItems);
+//        $order = $this->provideFoodList();
+        $order = new Order();
+        $order->setOrderItems($orderItems);
         $this->view->assign('customer', $customer);
         $this->view->assign('order', $order);
     }
@@ -64,7 +67,7 @@ class OrderController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
     {
         $collection = SubjectCollection::get('hofexpress_app/order');
         if (!isset($collection['order'])) {
-            $collection['order'] = $this->objectManager->get(Order::class);
+            $collection['order'] = $this->objectManager->get(OrderItems::class);
             $collection->persist();
         }
         return $collection['order'];

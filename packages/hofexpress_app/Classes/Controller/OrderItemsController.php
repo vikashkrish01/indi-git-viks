@@ -68,7 +68,7 @@ class OrderItemsController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContr
      * @throws \TYPO3\CMS\Extbase\Mvc\Exception\StopActionException
      * @throws \TYPO3\CMS\Extbase\Mvc\Exception\UnsupportedRequestTypeException
      */
-    public function addAction(Food $food, int $quantity=null)
+    public function addAction(Food  $food, int $quantity=null)
     {
         try {
             $customer = SubjectResolver::get()->forClassName(Customer::class)->forPropertyName('userId')->resolve();

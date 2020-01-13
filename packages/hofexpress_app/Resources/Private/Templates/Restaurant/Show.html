@@ -68,6 +68,7 @@ Otherwise your changes will be overwritten the next time you save the extension 
                 <th>Quantity</th>
             </tr>
             <f:for each="{restaurant.food}" as="food">
+                <f:form controller="OrderItems" action="add" pageUid="{settings.pages.orderItems}" pluginName="OrderPlugin">
             <tr>
 
                 <td>
@@ -81,6 +82,7 @@ Otherwise your changes will be overwritten the next time you save the extension 
                     </f:if>
                 </td>
                 <td>
+                    <f:form.radio name="food" value="{food}"></f:form.radio>
                     <f:link.action action="show" controller="Food" arguments="{food :food}">
                         {food.foodName}
                     </f:link.action>
@@ -91,14 +93,15 @@ Otherwise your changes will be overwritten the next time you save the extension 
 
                 </td>
                 <td>
-                        <f:link.action action="add" class="btn btn-info" arguments="{food:food, quantity: 1}"
-                                       controller="OrderItems"
-                                       pageUid="{settings.pages.orderItems}" pluginName="OrderPlugin">
-                            Add to Cart
-                        </f:link.action>
+                <f:form.textfield name="quantity" placeholder="Quantity" size="10" value="0" type="text" maxlength="4"
+                                  class="border border-success"/>
+                </td>
+                <td>
+                    <f:form.button class="btn btn-success">Add to Cart</f:form.button>
                 </td>
 
             </tr>
+                </f:form>
             </f:for>
         </table>
     </div>

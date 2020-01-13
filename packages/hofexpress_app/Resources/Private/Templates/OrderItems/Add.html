@@ -15,6 +15,7 @@ Otherwise your changes will be overwritten the next time you save the extension 
 <f:section name="content">
     <h1>View OrderItems</h1>
     <f:render partial="OrderItems/Properties" arguments="{orderItems:orderItems}" />
+     <f:form controller="Order" action="show" pageUid="10" pluginName="OrderPlugin">
         <div>
                 <f:if condition="{orderItems.food.image}">
                     <f:then>
@@ -31,6 +32,14 @@ Otherwise your changes will be overwritten the next time you save the extension 
     <div>
                 {orderItems.food.price -> f:format.currency(currencySign: '€')}
     </div>
+         <f:form.hidden name="orderItems" value="{orderItems}" />
+         <div>
+         <f:form.button class="btn btn-success">Add to Order</f:form.button>
+         </div>
+     </f:form>
+
+
+
     <f:link.action action="list">Back to list</f:link.action><br />
 </f:section>
 </html>
