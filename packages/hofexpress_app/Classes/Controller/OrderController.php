@@ -34,6 +34,13 @@ class OrderController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
     protected $orderRepository = null;
 
     /**
+     * orderItemsRepository
+     *
+     * @var \Hulk\HofexpressApp\Domain\Repository\OrderItemsRepository
+     */
+    protected $orderItemsRepository = null;
+
+    /**
      * action list
      * 
      * @return void
@@ -46,31 +53,60 @@ class OrderController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
 
     /**
      * action show
-     * @param OrderItems $orderItems
+     * @param Order $order
      * @return void
      */
-    public function showAction(OrderItems $orderItems)
+    public function showAction(Order $order)
     {
         try {
             $customer = SubjectResolver::get()->forClassName(Customer::class)->forPropertyName('userId')->resolve();
         } catch (InvalidSessionException $exception) {
             $customer = null;
         }
-        print_r($orderItems);
-//        $order = $this->provideFoodList();
-        $order = new Order();
-        $order->setOrderItems($orderItems);
+
+        $order = $this->provideOrder();
         $this->view->assign('customer', $customer);
         $this->view->assign('order', $order);
     }
-    private function provideFoodList()
+
+    public function showCurrentOrderAction()
     {
-        $collection = SubjectCollection::get('hofexpress_app/order');
+        $order = $this->provideOrder();
+        $this->view->assign('order', $order);
+    }
+
+    /**
+     * @param Food $food
+     * @param int $quantity
+     */
+    public function addToAction(Food $food, int $quantity)
+    {
+        $orderItems = new OrderItems();
+        $orderItems->setFood($food);
+        $orderItems->setQuantity($quantity);
+
+        $order = $this->provideOrder();
+        $order->addOrderItem($orderItems);
+
+//        $this->provideCollection()->persist();
+        $this->orderRepository->update($order);
+
+        $this->redirect('showCurrentOrder');
+    }
+
+    private function provideOrder(): Order
+    {
+        $collection = $this->provideCollection();
         if (!isset($collection['order'])) {
-            $collection['order'] = $this->objectManager->get(OrderItems::class);
+            $collection['order'] = $this->objectManager->get(Order::class);
             $collection->persist();
         }
         return $collection['order'];
+    }
+
+    private function provideCollection(): SubjectCollection
+    {
+        return SubjectCollection::get('hofexpress_app/order');
     }
 
     /**
@@ -84,22 +120,31 @@ class OrderController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
      */
     public function createAction(OrderItems $orderItems)
     {
-        $order = $this->provideFoodList();
+        $order = $this->provideOrder();
         $order->addOrderItems($orderItems->getFood());
         $order->orderRepository->update($order);
         $this->redirect('show');
     }
 
     /**
-     * action edit
-     * 
-     * @ignorevalidation $order
+     * @param Food $food
+     * @param int $quantity
      * @return void
+     * @throws \TYPO3\CMS\Extbase\Persistence\Exception\IllegalObjectTypeException
+     * @throws \TYPO3\CMS\Extbase\Persistence\Exception\UnknownObjectException
+     * @ignorevalidation $order
      */
-    public function editAction()
+    public function editToAction(Food $food, int $quantity)
     {
-        $order = $this->provideFoodList();
-        $this->view->assign('order', $order);
+
+        $orderItems = new OrderItems();
+        $orderItems->setFood($food);
+        $orderItems->setQuantity($quantity);
+
+        $order = $this->provideOrder();
+        $order->removeOrderItem($orderItems);
+        $this->orderRepository->update($order);
+        $this->redirect('showCurrentOrder');
     }
 
     /**
@@ -109,21 +154,23 @@ class OrderController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
      */
     public function updateAction()
     {
-        $order = $this->provideFoodList();
+        $order = $this->provideOrder();
         $this->orderRepository->update($order);
         $this->redirect('show');
     }
 
     /**
      * action delete
-     * 
+     * @param OrderItems $orderItems
      * @return void
      */
-    public function deleteAction()
+    public function deleteAction(OrderItems $orderItems)
     {
-        $order = $this->provideFoodList();
+        $order = $this->provideOrder();
         $this->orderRepository->remove($order);
-        $this->redirect('show');
+        $order->removeOrderItem($orderItems);
+        $this->orderRepository->update($order);
+        $this->redirect('showCurrentOrder');
     }
 
     /**
@@ -132,6 +179,14 @@ class OrderController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
     public function injectOrderRepository(OrderRepository $orderRepository)
     {
         $this->orderRepository = $orderRepository;
+    }
+
+    /**
+     * @param \Hulk\HofexpressApp\Domain\Repository\OrderItemsRepository $orderItemsRepository
+     */
+    public function injectOrderItemsRepository(\Hulk\HofexpressApp\Domain\Repository\OrderItemsRepository $orderItemsRepository)
+    {
+        $this->orderItemsRepository = $orderItemsRepository;
     }
 
     /**

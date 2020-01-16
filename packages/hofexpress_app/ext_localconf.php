@@ -57,14 +57,14 @@ call_user_func(
             'OrderPlugin',
             [
 
-                'Order' => 'show, new, create, update, delete',
+                'Order' => 'showCurrentOrder,show, new, create, update, delete, addTo,editTo',
                 'OrderItems' => 'show, add, update, delete'
 
             ],
             // non-cacheable actions
             [
 
-                'Order' => 'show, new, create, update, delete',
+                'Order' => 'showCurrentOrder,show, new, create, update, delete, addTo, editTo',
                 'OrderItems' => 'show, add, update, delete'
             ]
         );

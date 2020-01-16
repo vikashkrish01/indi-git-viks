@@ -1,0 +1,38 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:layout name="Default" />
+
+This Template is responsible for displaying a single view for a domain object
+
+If you modify this template, do not forget to change the overwrite settings
+in /Configuration/ExtensionBuilder/settings.yaml:
+Resources:
+Private:
+Templates:
+Show.html: keep
+
+Otherwise your changes will be overwritten the next time you save the extension in the extension builder
+
+<f:section name="content">
+    <h2>Current Order</h2>
+
+
+    <f:for each="{order.orderItems}" as="orderItems" iteration="iteration">
+        <div>
+        {iteration.index}
+        <div>Food: {orderItems.food.foodName}</div>
+        <div>Quantity: {orderItems.quantity}</div>
+            <f:link.action action="editTo" class="btn btn-info" arguments="{food:food, quantity: quantity}"
+                           controller="Order"
+            >
+                Delete this Item
+            </f:link.action>
+        </div>
+    </f:for>
+
+    <f:if condition="{customer}">
+        Hello {customer.userId}!
+    </f:if>
+    <f:render partial="Order/Properties" arguments="{order:order}" />
+    <f:link.action action="list">Back to list</f:link.action><br />
+</f:section>
+</html>

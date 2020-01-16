@@ -4,6 +4,7 @@ namespace Hulk\HofexpressApp\Controller;
 use Hulk\HofexpressApp\Domain\Model\Customer;
 use Hulk\HofexpressApp\Domain\Model\Food;
 use Hulk\HofexpressApp\Domain\Model\OrderItems;
+use Hulk\HofexpressApp\Domain\Model\Restaurant;
 use OliverHader\SessionService\InvalidSessionException;
 use OliverHader\SessionService\SubjectCollection;
 use OliverHader\SessionService\SubjectResolver;
@@ -64,11 +65,10 @@ class OrderItemsController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContr
      * action show
      * @param Food $food
      * @param int $quantity
+     * @param Restaurant $restaurant
      * @return void
-     * @throws \TYPO3\CMS\Extbase\Mvc\Exception\StopActionException
-     * @throws \TYPO3\CMS\Extbase\Mvc\Exception\UnsupportedRequestTypeException
      */
-    public function addAction(Food  $food, int $quantity=null)
+    public function addAction(Food  $food, int $quantity=null, Restaurant $restaurant)
     {
         try {
             $customer = SubjectResolver::get()->forClassName(Customer::class)->forPropertyName('userId')->resolve();
@@ -78,13 +78,19 @@ class OrderItemsController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContr
 
         // search for existing OrderItems in session, objects (search by Food
         // either null or one existing OrderItem
+
         $orderItems = new OrderItems();
-        $orderItems->setFood($food);
+        $this->view->assign('food', $food);
         $orderItems->setQuantity($quantity);
-        $this->view->assign('customer', $customer);
+        $this->view->assign('quantity', $quantity);
         $this->view->assign('orderItems', $orderItems);
+        $this->view->assign('restaurant', $restaurant);
+        $this->view->assign('customer', $customer);
 //        $this->redirect('show');
 
+
+        // fetching Order from Session
+        // Order->addOrderItem
 
 //        $orderItems = $this->provideFoodList();
 
